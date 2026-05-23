@@ -1,0 +1,33 @@
+# Dependencies
+**/node_modules/
+
+# Next.js
+web/.next/
+web/out/
+web/next-env.d.ts
+
+# Vercel
+web/.vercel/
+
+# Local env files (NEVER commit secrets)
+.env
+.env.local
+.env.*.local
+web/.env
+web/.env.local
+web/.env.*.local
+
+# Local tool / cache directories
+web/.turbo/
+web/.playwright-mcp/
+.playwright-mcp/
+home-viewport.png
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+.claude/
+
+# Build artifacts
+web/tsconfig.tsbuildinfo

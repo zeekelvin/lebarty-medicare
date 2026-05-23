@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/*
+  Lebarty Medi-Care — cinematic theme.
+  Register: clinical-warm. Bright, hopeful, human.
+  Palette from the Lebarty Brand Guide:
+    Lebarty Pink #f21872 · Deep Navy #12324A · Clinical Teal #0E8D8B
+    Mint Wash #E9F9F6 · Soft Cloud #F7FAFC · Slate Text #31485A
+  Interactive teal/pink are slightly deepened for WCAG AA contrast.
+*/
+@theme inline {
+  --color-bg: #f7fafc;            /* Soft Cloud — page base */
+  --color-fg: #12324a;            /* Deep Navy — body text + headlines */
+  --color-muted: #e9f9f6;         /* Mint Wash — light teal-tinted surface */
+  --color-line: rgba(18, 50, 74, 0.12);
+  --color-accent: #0c7b79;        /* Clinical Teal, AA-tuned — text + buttons */
+  --color-accent-soft: rgba(14, 141, 139, 0.12);
+  --color-brand: #f21872;         /* Lebarty Pink — fills, bars, glows */
+  --color-warm: #d11062;          /* deep Lebarty Pink, AA-tuned — foundation/donate */
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Custom cursor active — hide native cursor on fine-pointer devices */
+  @media (hover: hover) and (pointer: fine) {
+    body.has-cursor,
+    body.has-cursor * {
+      cursor: none !important;
+    }
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    z-index: 200;
+    transition: top 200ms ease;
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .hairline {
+    border-color: var(--color-line);
+  }
+  .container-page {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+}

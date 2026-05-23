@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 770" role="img" aria-label="Lebarty Medi-Care Hospital">
+  <title>Lebarty Medi-Care Hospital</title>
+  <defs>
+    <linearGradient id="heartGrad" x1="0.18" y1="0.05" x2="0.82" y2="0.98">
+      <stop offset="0%" stop-color="#FF7DB0"/>
+      <stop offset="34%" stop-color="#F21872"/>
+      <stop offset="100%" stop-color="#A30F54"/>
+    </linearGradient>
+    <radialGradient id="heartSheen" cx="0.34" cy="0.26" r="0.6">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="lift" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#7A0E40" flood-opacity="0.38"/>
+    </filter>
+    <filter id="emboss" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#8E1050" flood-opacity="0.55"/>
+    </filter>
+    <path id="arc" d="M 96,604 A 300,300 0 0,0 604,604"/>
+  </defs>
+
+  <!-- Heart body with 3D shading -->
+  <g filter="url(#lift)">
+    <path
+      d="M 350,556 C 350,556 80,360 80,205 C 80,108 160,56 244,56 C 307,56 346,102 350,150 C 354,102 393,56 456,56 C 540,56 620,108 620,205 C 620,360 350,556 350,556 Z"
+      fill="url(#heartGrad)"/>
+    <path
+      d="M 350,556 C 350,556 80,360 80,205 C 80,108 160,56 244,56 C 307,56 346,102 350,150 C 354,102 393,56 456,56 C 540,56 620,108 620,205 C 620,360 350,556 350,556 Z"
+      fill="url(#heartSheen)"/>
+  </g>
+
+  <!-- EKG heartbeat line -->
+  <polyline
+    points="135,300 290,300 318,262 346,300 398,300 442,128 486,470 528,236 562,330 584,300 590,300"
+    fill="none" stroke="#FFFFFF" stroke-width="27"
+    stroke-linecap="round" stroke-linejoin="round" filter="url(#emboss)"/>
+
+  <!-- Curved wordmark -->
+  <text font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="50"
+        font-weight="800" letter-spacing="3" fill="#0E8D8B">
+    <textPath href="#arc" startOffset="50%" text-anchor="middle">
+      LEBARTY MEDI-CARE HOSPITAL
+    </textPath>
+  </text>
+</svg>
