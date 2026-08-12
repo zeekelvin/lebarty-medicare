@@ -9,6 +9,11 @@ web/next-env.d.ts
 # Vercel
 web/.vercel/
 
+# Cloudflare / OpenNext build output
+web/.open-next/
+web/.wrangler/
+web/cloudflare-env.d.ts
+
 # Local env files (NEVER commit secrets)
 .env
 .env.local
