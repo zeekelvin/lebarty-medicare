@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const content: ServiceContent = {
-  eyebrow: "Preventive care · Schenectady, NY",
+  eyebrow: "Preventive care · Benin City, Edo State",
   title: "The visits that prevent the visits.",
   intro:
     "Annual wellness, screenings calibrated to your age and history, lab work, and women's and men's health — coordinated as part of one continuous primary-care plan. Preventive care is the quiet work that keeps small concerns from becoming serious ones.",

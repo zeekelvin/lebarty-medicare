@@ -27,7 +27,7 @@ export function FoundationCallout() {
             The Foundation builds and supplies community health clinics in
             under-served villages across Africa — most of them in regions where
             a single visit by a physician changes a life. Funding starts with
-            patient visits in Schenectady. Every appointment in our clinic is a
+            patient visits in Benin City. Every appointment in our clinic is a
             quiet act of solidarity with a community on the other side of the
             world.
           </p>

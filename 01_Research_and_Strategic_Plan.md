@@ -4,6 +4,21 @@
 
 ---
 
+> ## ⚠️ UPDATE — 2026-08-20 (supersedes location/brand references below)
+>
+> Per client direction (2026-08-13/20), the site is now **hospital-specific**: **Lebarty Medicare Hospital** (keep the Foundation tab). All "Lebarty Medical PLLC" / Schenectady, NY practice references in this document are historical research context — the live site now carries:
+>
+> - **Name:** Lebarty Medicare Hospital (short: Lebarty Medicare)
+> - **Address:** Along Ugo Ben Road, by Festus Ajayi Junction, Irhirhi Road, Aruogba Community, off Airport Road, Benin City, Edo State, Nigeria
+> - **Phone (NG):** +234 701 034 8626 · **US line:** (518) 930-8780
+> - **Email:** info@lebartymedicare.org
+> - **Domain:** lebartymedicare.org (canonical) · lebartymedicare.com (supporting redirect)
+> - **Models:** Beninmedicalcare.com · https://lebarty-hospital-clinical.vercel.app
+>
+> Task tracking: Jira project **LMW** (mikejgeorge32.atlassian.net).
+
+---
+
 ## 0. Executive Summary
 
 We're rebuilding the Lebarty Medical PLLC web presence — currently in dev with Proweaver at `proweaver.design/lebartymedich4` — into a flagship site that fuses a **community-impact-led foundation narrative** with a fully-functional **medical practice** (booking, telehealth, patient portal, providers, content). Stack: **Next.js + Supabase + Stripe**, the Zagaprime standard.

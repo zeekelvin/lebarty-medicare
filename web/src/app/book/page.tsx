@@ -12,14 +12,14 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Book a visit",
   description:
-    "Schedule a visit with Dr. Nosa Lebarty — primary care, addiction medicine, telehealth, and USCIS exams in Schenectady, NY. Same-week appointments for new patients.",
+    "Schedule a visit with Dr. Nosa Lebarty — primary care, addiction medicine, telehealth, and USCIS exams in Benin City, Edo State. Same-week appointments for new patients.",
 };
 
 const bookingWays = [
   {
     eyebrow: "The fastest way",
     title: "Call us",
-    body: `Reach the front desk at ${site.contact.phoneDisplay}, Monday through Friday, 8 AM to 6 PM ET. A real person will find you a time — most new patients are seen within a week.`,
+    body: `Reach the front desk at ${site.contact.phoneDisplay}, Monday through Friday, 8 AM to 6 PM WAT. A real person will find you a time — most new patients are seen within a week.`,
   },
   {
     eyebrow: "From anywhere",
@@ -46,7 +46,7 @@ export default function BookPage() {
     <>
       <PageHero
         image={assets.pages.contact}
-        imageAlt="A patient checking in at the welcoming Lebarty Medical front desk"
+        imageAlt="A patient checking in at the welcoming Lebarty Medicare front desk"
         eyebrow="Book a visit"
         title="Pick a time that fits."
         intro="Same-week appointments for new patients. Existing patients usually find a slot within two to three days. Telehealth is available most weekday evenings."

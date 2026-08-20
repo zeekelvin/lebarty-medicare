@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/foundation',
     '/foundation/donate',
     '/resources',
-    '/locations/schenectady',
+    '/locations/benin-city',
     '/contact',
     '/accessibility',
     '/privacy',

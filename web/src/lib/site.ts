@@ -4,12 +4,12 @@
  */
 
 export const site = {
-  name: 'Lebarty Medical',
-  fullName: 'Lebarty Medical PLLC & Lebarty Community Health Foundation',
+  name: 'Lebarty Medicare',
+  fullName: 'Lebarty Medicare Hospital & Lebarty Community Health Foundation',
   shortDescription:
-    'Independent physician practice in Schenectady, NY — primary care, addiction medicine, and telehealth — funding community clinics here and across Africa.',
-  url: 'https://lebartymedical.com',
-  domain: 'lebartymedical.com',
+    'Independent physician practice in Benin City, Edo State — primary care, addiction medicine, and telehealth — funding community clinics here and across Africa.',
+  url: 'https://lebartymedicare.org',
+  domain: 'lebartymedicare.org',
   ogImage: '/og-image.png',
   founder: {
     name: 'Nosa Aigbe Lebarty, MD',
@@ -24,18 +24,19 @@ export const site = {
     ],
   },
   contact: {
-    phoneDisplay: '(518) 240-1456',
-    phoneTel: '+15182401456',
-    fax: '(607) 800-4134',
-    email: 'info@lebartymedical.com',
+    phoneDisplay: '+234 701 034 8626',
+    phoneTel: '+2347010348626',
+    usPhoneDisplay: '(518) 930-8780',
+    usPhoneTel: '+15189308780',
+    email: 'info@lebartymedicare.org',
   },
   location: {
-    name: 'Lebarty Medical PLLC',
-    street: '317 Danielle Drive',
-    city: 'Schenectady',
-    region: 'NY',
-    postalCode: '12303',
-    country: 'US',
+    name: 'Lebarty Medicare Hospital',
+    street: 'Along Ugo Ben Road, by Festus Ajayi Junction, Irhirhi Road, Aruogba Community, off Airport Road',
+    city: 'Benin City',
+    region: 'Edo State',
+    postalCode: '',
+    country: 'NG',
     hours: [
       { days: 'Mon – Fri', hours: '8:00 AM – 6:00 PM' },
       { days: 'Saturday',  hours: '9:00 AM – 1:00 PM' },
@@ -115,7 +116,7 @@ export const insurance = [
 
 export const navPrimary = [
   { label: 'Services',   href: '/services' },
-  { label: 'Dr. Lebarty', href: '/about/dr-lebarty' },
+  { label: 'About us', href: '/about/dr-lebarty' },
   { label: 'Patients',   href: '/patients' },
   { label: 'Foundation', href: '/foundation' },
   { label: 'Resources',  href: '/resources' },

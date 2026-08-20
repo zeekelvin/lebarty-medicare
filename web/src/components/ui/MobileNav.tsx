@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X } from "lucide-react";
+
+const MotionLink = motion.create(Link);
 
 export type MobileNavLink = { href: string; label: string; n: string };
 
@@ -14,11 +17,11 @@ export type MobileNavLink = { href: string; label: string; n: string };
  * Works with real route hrefs (multi-page) or hash anchors.
  */
 export function MobileNav({
-  brandKicker = "Lebarty Medical",
+  brandKicker = "Lebarty Medicare",
   brandName = "& FOUNDATION",
   links,
   cta = { href: "/book", label: "Book a Visit →" },
-  footer = "Schenectady, NY · Telehealth statewide",
+  footer = "Benin City, Edo State · Telehealth available",
 }: {
   brandKicker?: string;
   brandName?: string;
@@ -129,9 +132,10 @@ export function MobileNav({
 
               <nav className="flex flex-col gap-1">
                 {links.map((link, i) => (
-                  <motion.a
+                  <MotionLink
                     key={link.href}
                     href={link.href}
+                    onClick={() => setOpen(false)}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
@@ -149,7 +153,7 @@ export function MobileNav({
                       {link.label}
                     </span>
                     <span className="ml-auto h-2 w-2 self-center rounded-full bg-fg/20 transition-colors group-hover:bg-brand" />
-                  </motion.a>
+                  </MotionLink>
                 ))}
               </nav>
 
@@ -159,12 +163,13 @@ export function MobileNav({
                 transition={{ duration: 0.6, delay: 0.95 }}
                 className="flex flex-col gap-4"
               >
-                <a
+                <Link
                   href={cta.href}
+                  onClick={() => setOpen(false)}
                   className="flex w-full items-center justify-center rounded-full bg-accent px-7 py-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-accent/90"
                 >
                   {cta.label}
-                </a>
+                </Link>
                 <span className="text-center font-mono text-[10px] uppercase tracking-[0.32em] text-fg/35">
                   {footer}
                 </span>

@@ -11,7 +11,7 @@ import { services, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Primary care, addiction medicine, telehealth, nursing-home visits, USCIS civil surgeon exams, and preventive care — all from one physician in Schenectady, NY.",
+    "Primary care, addiction medicine, telehealth, nursing-home visits, USCIS civil surgeon exams, and preventive care — all from one physician in Benin City, Edo State.",
 };
 
 export default function ServicesIndexPage() {

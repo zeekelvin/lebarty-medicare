@@ -3,14 +3,14 @@ import { ServicePage, type ServiceContent } from "@/components/site/ServicePage"
 import { assets } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: "Primary Care in Schenectady, NY",
+  title: "Primary Care in Benin City, Edo State",
   description:
     "Annual physicals, chronic-condition management, vaccinations, and preventive care with Dr. Nosa Lebarty, MD. New patients welcome — most insurance accepted.",
   alternates: { canonical: "/services/primary-care" },
 };
 
 const content: ServiceContent = {
-  eyebrow: "Primary care · Schenectady, NY",
+  eyebrow: "Primary care · Benin City, Edo State",
   title: "A doctor who knows you.",
   intro:
     "Annual physicals, chronic disease management, vaccinations, screenings, lab work, and referrals — all coordinated by a physician who has time for the conversation. Primary care is the home base for your health, and Dr. Lebarty builds it around continuity, not minutes-per-visit.",

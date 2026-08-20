@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach Lebarty Medical in Schenectady, NY. Call, fax, email, or send a message. For urgent medical issues call 911; for crisis support call or text 988.",
+    "Reach Lebarty Medicare in Benin City, Edo State. Call, email, or send a message.",
 };
 
 const inputClass =
@@ -22,10 +22,10 @@ export default function ContactPage() {
     <>
       <PageHero
         image={assets.pages.contact}
-        imageAlt="The welcoming front desk and waiting area at Lebarty Medical"
+        imageAlt="The welcoming front desk and waiting area at Lebarty Medicare"
         eyebrow="Contact"
         title="Talk to a real person."
-        intro="Monday through Friday, 8 AM to 6 PM ET. Most messages are returned the same business day. For urgent medical issues call 911 — for crisis support, dial or text 988."
+        intro="Monday through Friday, 8 AM to 6 PM WAT. Most messages are returned the same business day. For urgent medical issues call 911 — for crisis support, dial or text 988."
       >
         <ButtonLink href={`tel:${site.contact.phoneTel}`} size="lg">
           Call {site.contact.phoneDisplay}
@@ -89,7 +89,7 @@ export default function ContactPage() {
                     name="phone"
                     type="tel"
                     autoComplete="tel"
-                    placeholder="(518) 000-0000"
+                    placeholder="+234 700 000 0000"
                     className={inputClass}
                   />
                 </label>
@@ -160,9 +160,16 @@ export default function ContactPage() {
                 <dl className="mt-6 space-y-4 text-sm text-white/80">
                   <div>
                     <dt className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/50">
-                      Fax
+                      US line
                     </dt>
-                    <dd className="mt-1">{site.contact.fax}</dd>
+                    <dd className="mt-1">
+                      <a
+                        href={`tel:${site.contact.usPhoneTel}`}
+                        className="underline underline-offset-2"
+                      >
+                        {site.contact.usPhoneDisplay}
+                      </a>
+                    </dd>
                   </div>
                   <div>
                     <dt className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/50">

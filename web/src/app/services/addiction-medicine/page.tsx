@@ -3,14 +3,14 @@ import { ServicePage, type ServiceContent } from "@/components/site/ServicePage"
 import { assets } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: "Addiction Medicine & Suboxone in Schenectady, NY",
+  title: "Addiction Medicine & Suboxone in Benin City, Edo State",
   description:
     "Compassionate, judgment-free treatment for opioid use disorder with Dr. Nosa Lebarty, MD. Suboxone (buprenorphine) and medication-assisted treatment — same-week appointments, telehealth induction available, Medicaid accepted.",
   alternates: { canonical: "/services/addiction-medicine" },
 };
 
 const content: ServiceContent = {
-  eyebrow: "Addiction medicine · Schenectady, NY",
+  eyebrow: "Addiction medicine · Benin City, Edo State",
   title: "Recovery is medicine, not a moral test.",
   intro:
     "Dr. Nosa Lebarty, MD provides Suboxone (buprenorphine) and medication-assisted treatment for opioid use disorder. Same-week appointments, telehealth induction available, Medicaid and Medicare accepted, and zero judgment. Coming in does not require being clean — wherever you are today, you can start here.",

@@ -108,10 +108,10 @@ export default function DonatePage() {
                 <p className="mt-5 text-sm text-white/65">
                   Email{" "}
                   <a
-                    href="mailto:foundation@lebartymedical.com"
+                    href="mailto:info@lebartymedicare.org"
                     className="text-brand underline underline-offset-2"
                   >
-                    foundation@lebartymedical.com
+                    info@lebartymedicare.org
                   </a>{" "}
                   to coordinate.
                 </p>

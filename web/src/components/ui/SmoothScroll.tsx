@@ -18,7 +18,7 @@ declare global {
 export function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 0.7,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       touchMultiplier: 1.6,
@@ -46,7 +46,7 @@ export function SmoothScroll() {
       const el = document.querySelector(selector);
       if (!el) return;
       e.preventDefault();
-      lenis.scrollTo(el as HTMLElement, { offset: -80, duration: 1.4 });
+      lenis.scrollTo(el as HTMLElement, { offset: -80, duration: 0.9 });
       window.dispatchEvent(new CustomEvent("nav:scrolled"));
     };
     document.addEventListener("click", onClick);

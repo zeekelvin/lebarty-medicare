@@ -41,14 +41,6 @@
     overflow-x: hidden;
   }
 
-  /* Custom cursor active — hide native cursor on fine-pointer devices */
-  @media (hover: hover) and (pointer: fine) {
-    body.has-cursor,
-    body.has-cursor * {
-      cursor: none !important;
-    }
-  }
-
   ::selection {
     background: var(--color-accent);
     color: #fff;

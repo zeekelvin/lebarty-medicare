@@ -77,7 +77,7 @@ export function Hero() {
           {stillExists && assets.heroStill && (
             <Image
               src={assets.heroStill}
-              alt="A bright, welcoming Lebarty Medical clinic"
+              alt="A bright, welcoming Lebarty Medicare Hospital"
               fill
               priority
               sizes="100vw"
@@ -133,7 +133,7 @@ export function Hero() {
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
           className="font-mono text-[10px] uppercase tracking-[0.42em] text-fg/70 sm:text-[11px]"
         >
-          Schenectady, NY · Telehealth across New York
+          Benin City, Edo State · Telehealth available
         </motion.span>
         <motion.div
           aria-hidden
@@ -156,7 +156,7 @@ export function Hero() {
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.32em] text-accent">
               <span className="h-px w-10 bg-accent" />
-              Lebarty Medical &amp; Foundation
+              Lebarty Medicare &amp; Foundation
             </span>
             <h1 className="mt-4 font-display text-[clamp(2.6rem,6.4vw,5.6rem)] leading-[0.98] tracking-tight text-fg">
               Care that travels with you.
@@ -165,7 +165,7 @@ export function Hero() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-fg/70 sm:text-base">
-              An independent physician practice in Schenectady — primary care,
+              An independent physician practice in Benin City — primary care,
               addiction medicine, and telehealth. Every visit helps fund
               community clinics across Africa.
             </p>

@@ -50,7 +50,7 @@ export function Footer() {
               <li><Link href="/book" className="transition-colors hover:text-brand">Book a visit</Link></li>
               <li><Link href="/patients/insurance" className="transition-colors hover:text-brand">Insurance</Link></li>
               <li><Link href="/patients" className="transition-colors hover:text-brand">Patient portal</Link></li>
-              <li><Link href="/locations/schenectady" className="transition-colors hover:text-brand">Location &amp; hours</Link></li>
+              <li><Link href="/locations/benin-city" className="transition-colors hover:text-brand">Location &amp; hours</Link></li>
             </ul>
           </div>
 
@@ -90,7 +90,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-white/10 pt-8 font-mono text-[10px] uppercase tracking-[0.16em] text-white/45 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Lebarty Medical PLLC. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Lebarty Medicare Hospital. All rights reserved.</p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li><Link href="/privacy" className="transition-colors hover:text-brand">Privacy</Link></li>
             <li><Link href="/hipaa-notice" className="transition-colors hover:text-brand">HIPAA notice</Link></li>

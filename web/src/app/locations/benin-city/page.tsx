@@ -10,9 +10,9 @@ import { assets } from "@/lib/assets";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Schenectady location & hours",
+  title: "Benin City location & hours",
   description:
-    "Lebarty Medical PLLC is located at 317 Danielle Drive, Schenectady, NY. Hours, directions, parking, and accessibility.",
+    "Lebarty Medicare Hospital is located along Ugo Ben Road, by Festus Ajayi Junction, Irhirhi Road, Aruogba Community, off Airport Road, Benin City, Edo State. Hours, directions, parking, and accessibility.",
 };
 
 const accessibility = [
@@ -22,17 +22,17 @@ const accessibility = [
   "Spanish, French, and Edo speakers on staff",
 ];
 
-export default function SchenectadyLocationPage() {
+export default function BeninCityLocationPage() {
   const { location } = site;
 
   return (
     <>
       <PageHero
         image={assets.pages.locationExterior}
-        imageAlt="The exterior of the Lebarty Medical clinic in Schenectady, New York"
+        imageAlt="The exterior of Lebarty Medicare Hospital in Benin City, Edo State"
         eyebrow="Visit us"
-        title="Our Schenectady clinic."
-        intro="Find us at 317 Danielle Drive — easy off-Route-7 access, free on-site parking, and a calm, welcoming entrance built for a low-key visit. Can't make it in today? Telehealth is available across New York State."
+        title="Our Benin City hospital."
+        intro="Find us along Ugo Ben Road, by Festus Ajayi Junction, Irhirhi Road — in Aruogba Community, off Airport Road. Free on-site parking and a calm, welcoming entrance built for a low-key visit. Can't make it in today? Telehealth is available."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit
@@ -45,12 +45,12 @@ export default function SchenectadyLocationPage() {
       <Section>
         <FeatureRow
           image={assets.pages.locationInterior}
-          imageAlt="The bright, calm waiting area inside the Lebarty Medical clinic"
+          imageAlt="The bright, calm waiting area inside the Lebarty Medicare Hospital"
           eyebrow="Inside the clinic"
           title="A quiet, unhurried place to be cared for."
         >
           <p>
-            The Schenectady office was designed to feel less like a busy clinic
+            The Benin City office was designed to feel less like a busy clinic
             and more like a place to breathe. Natural light, comfortable
             seating, and private exam rooms set the tone for the kind of care
             we believe in — continuity over minutes-per-visit.
@@ -97,8 +97,15 @@ export default function SchenectadyLocationPage() {
                   </dd>
                 </div>
                 <div className="flex justify-between gap-4">
-                  <dt className="font-medium text-fg">Fax</dt>
-                  <dd>{site.contact.fax}</dd>
+                  <dt className="font-medium text-fg">US line</dt>
+                  <dd>
+                    <a
+                      href={`tel:${site.contact.usPhoneTel}`}
+                      className="text-accent underline underline-offset-2"
+                    >
+                      {site.contact.usPhoneDisplay}
+                    </a>
+                  </dd>
                 </div>
               </dl>
               <ButtonLink href="/book" className="mt-7 w-full">
@@ -145,7 +152,7 @@ export default function SchenectadyLocationPage() {
                   {location.street}, {location.city}, {location.region}
                 </p>
                 <p className="mt-1 text-sm text-fg/60">
-                  Just off Route 7 &middot; Free on-site parking
+                  Off Airport Road &middot; Free on-site parking
                 </p>
               </div>
             </div>
@@ -165,7 +172,8 @@ export default function SchenectadyLocationPage() {
               </h2>
               <div className="mt-5 space-y-4 text-base leading-relaxed text-fg/75">
                 <p>
-                  The clinic sits just off Route 7, with free parking right
+                  The clinic sits in Aruogba Community, off Airport Road — along
+                  Ugo Ben Road by Festus Ajayi Junction — with free parking right
                   outside the entrance — no garages, no meters, no circling the
                   block. Accessible spaces are located closest to the door.
                 </p>
@@ -207,8 +215,8 @@ export default function SchenectadyLocationPage() {
       </Section>
 
       <CTABand
-        title="Come see us in Schenectady."
-        body="Book an in-person visit at 317 Danielle Drive, or choose telehealth from anywhere in New York State. We'll find a time that works."
+        title="Come see us in Benin City."
+        body="Book an in-person visit at our clinic in Aruogba Community, off Airport Road, or choose a telehealth appointment. We'll find a time that works."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit

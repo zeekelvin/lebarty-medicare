@@ -1,6 +1,6 @@
-# lebartymedical.com
+# lebartymedicare.org
 
-Marketing + foundation site for **Lebarty Medical PLLC** and the **Lebarty Community Health Foundation**, built by Zagaprime.
+Marketing + foundation site for **Lebarty Medicare Hospital** and the **Lebarty Community Health Foundation**, built by Zagaprime.
 
 Stack: **Next.js 15** (App Router) · **React 19** · **Tailwind CSS** · **TypeScript** · **Stripe** (donations) · **Supabase** (non-PHI: blog, contact, donation logs) · **Tebra** (booking + patient portal embed).
 
@@ -43,7 +43,7 @@ web/
 │   │   ├── patients/       # Patient hub + insurance
 │   │   ├── foundation/     # Foundation home + donate flow
 │   │   ├── resources/      # Blog index (cornerstone list)
-│   │   ├── locations/schenectady/
+│   │   ├── locations/benin-city/
 │   │   ├── contact/
 │   │   ├── accessibility/
 │   │   ├── privacy/
@@ -148,7 +148,7 @@ Plus a manual pass with NVDA (Windows) and VoiceOver (Mac).
 1. Push this repo to GitHub.
 2. Import in Vercel; framework auto-detects Next.js.
 3. Set environment variables (copy from `.env.example` and fill).
-4. Add custom domain `lebartymedical.com`; Vercel handles SSL.
+4. Add custom domain `lebartymedicare.org`; Vercel handles SSL.
 5. **For Phase 2 PHI** (in-house portal): upgrade to Vercel Enterprise + sign BAA, and Supabase Team plan + HIPAA add-on.
 
 ### Performance targets at launch

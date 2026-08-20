@@ -1,7 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { Intro } from "@/components/sections/Intro";
 import { ServicesShowcase } from "@/components/sections/ServicesShowcase";
-import { DoctorSpotlight } from "@/components/sections/DoctorSpotlight";
 import { FoundationCallout } from "@/components/sections/FoundationCallout";
 import { Impact } from "@/components/sections/Impact";
 import { HomeCTA } from "@/components/sections/HomeCTA";
@@ -32,7 +31,6 @@ export default function HomePage() {
         ]}
         baseDuration={42}
       />
-      <DoctorSpotlight />
       <FoundationCallout />
       <Impact />
       <HomeCTA />

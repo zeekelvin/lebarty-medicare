@@ -79,7 +79,7 @@ export default function FoundationPage() {
           />
           <div className="space-y-5 text-base leading-relaxed text-fg/75">
             <p>
-              The same belief that shapes every visit in Schenectady — that
+              The same belief that shapes every visit in Benin City — that
               every person deserves a competent, unhurried doctor — does not
               stop at a city limit or a national border. The Lebarty Community
               Health Foundation carries that promise to the places where care

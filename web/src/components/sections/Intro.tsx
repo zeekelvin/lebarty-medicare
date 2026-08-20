@@ -59,7 +59,7 @@ export function Intro() {
           className="flex flex-col justify-end lg:col-span-5"
         >
           <p className="text-base leading-relaxed text-fg/70 sm:text-lg">
-            Lebarty Medical was founded by Dr. Nosa Lebarty — board-certified in
+            Lebarty Medicare was founded by Dr. Nosa Lebarty — board-certified in
             family medicine, a USCIS civil surgeon, and medical director for
             Albany County. He built the practice and the Lebarty Community
             Health Foundation on one belief: every person, wherever they are,

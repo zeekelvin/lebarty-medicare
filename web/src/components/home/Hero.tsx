@@ -18,13 +18,13 @@ export function Hero() {
 
       <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-12 lg:py-28">
         <div className="lg:col-span-7">
-          <Eyebrow>Schenectady, NY · Telehealth across New York</Eyebrow>
+          <Eyebrow>Benin City, Edo State · Telehealth available</Eyebrow>
           <h1 className="mt-6 font-serif text-display-xl text-forest-500">
             Care that travels with you.
             <span className="block text-terracotta-500">Clinics that travel further.</span>
           </h1>
           <p className="mt-8 max-w-xl font-sans text-lg leading-relaxed text-charcoal-700">
-            Lebarty Medical is an independent physician practice founded by Dr. Nosa Lebarty —
+            Lebarty Medicare is an independent physician practice founded by Dr. Nosa Lebarty —
             board-certified in family medicine, civil surgeon for U.S. Citizenship and
             Immigration Services, and medical director for Albany County. Every patient visit
             here helps fund community clinics across Africa through the
@@ -116,7 +116,7 @@ function HeroVisual() {
         </svg>
         <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-cream-50/95 p-5 backdrop-blur">
           <p className="font-serif text-lg leading-snug text-forest-700">
-            "Every patient I see in Schenectady helps build a clinic in a village
+            "Every patient I see in Benin City helps build a clinic in a village
             that's never seen a doctor."
           </p>
           <p className="mt-3 font-sans text-xs uppercase tracking-[0.18em] text-terracotta-700">

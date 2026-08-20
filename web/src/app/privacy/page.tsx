@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy policy",
   description:
-    "How Lebarty Medical collects, uses, and protects information on this website. We collect only what we need and we never sell your data.",
+    "How Lebarty Medicare collects, uses, and protects information on this website. We collect only what we need and we never sell your data.",
 };
 
 export default function PrivacyPage() {
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
           <p className="text-sm text-fg/55">Last updated: May 2026</p>
 
           <p>
-            This privacy policy explains how Lebarty Medical PLLC handles
+            This privacy policy explains how Lebarty Medicare Hospital handles
             information collected through this website. It does not cover
             protected health information held in your medical record — that
             information is governed by our{" "}

@@ -3,14 +3,14 @@ import { ServicePage, type ServiceContent } from "@/components/site/ServicePage"
 import { assets } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: "USCIS Civil Surgeon — I-693 Medical Exams in Schenectady, NY",
+  title: "USCIS Civil Surgeon — I-693 Medical Exams",
   description:
     "Form I-693 immigration medical examinations by Dr. Nosa Lebarty, MD, a USCIS-designated civil surgeon. Required vaccinations on site, sealed envelope, completed correctly in one visit.",
   alternates: { canonical: "/services/civil-surgeon-uscis-exams" },
 };
 
 const content: ServiceContent = {
-  eyebrow: "USCIS civil surgeon · Schenectady, NY",
+  eyebrow: "USCIS civil surgeon",
   title: "I-693 exams — done right the first time.",
   intro:
     "Dr. Nosa Lebarty, MD is designated by U.S. Citizenship and Immigration Services as a civil surgeon, qualified to perform the Form I-693 medical examination for adjustment-of-status applicants. Most exams are completed in a single visit, with the required vaccinations available on site.",

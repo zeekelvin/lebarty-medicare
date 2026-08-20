@@ -25,7 +25,7 @@ export default function AccessibilityPage() {
 
           <h2>Our commitment</h2>
           <p>
-            Lebarty Medical PLLC is committed to ensuring digital accessibility
+            Lebarty Medicare Hospital is committed to ensuring digital accessibility
             for people with disabilities. We are continually improving the user
             experience for everyone and applying the relevant accessibility
             standards to make our website usable by as many people as possible.

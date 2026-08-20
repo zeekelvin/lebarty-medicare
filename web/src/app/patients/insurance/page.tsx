@@ -11,7 +11,7 @@ import { site, insurance } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Insurance & billing",
   description:
-    "Lebarty Medical accepts Medicare, Medicaid Managed Care, and most major commercial plans. Insurance, self-pay rates, and billing for our Schenectady, NY practice.",
+    "Lebarty Medicare accepts Medicare, Medicaid Managed Care, and most major commercial plans. Insurance, self-pay rates, and billing for our Benin City, Edo State practice.",
 };
 
 const billingNotes = [
@@ -34,7 +34,7 @@ export default function InsurancePage() {
     <>
       <PageHero
         image={assets.pages.patients}
-        imageAlt="A patient reviewing coverage details with staff at the Lebarty Medical front desk"
+        imageAlt="A patient reviewing coverage details with staff at the Lebarty Medicare front desk"
         eyebrow="Patients"
         title="Insurance & billing"
         intro="We accept Medicare, Medicaid Managed Care, and most major commercial plans — and we verify your benefits before your visit so there are no surprises. If your plan isn't listed, call us. We'll check."

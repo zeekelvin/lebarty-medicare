@@ -5,7 +5,7 @@ import { assets } from "@/lib/assets";
 export const metadata: Metadata = {
   title: "Nursing-Home Physician Visits — Capital Region, NY",
   description:
-    "On-site and telehealth physician visits at skilled nursing facilities across the Albany and Schenectady region, with Dr. Nosa Lebarty, MD.",
+    "On-site and telehealth physician visits at skilled nursing facilities across Benin City and surrounding communities, with Dr. Nosa Lebarty, MD.",
   alternates: { canonical: "/services/nursing-home-visits" },
 };
 
@@ -17,7 +17,7 @@ const content: ServiceContent = {
   heroImage: assets.pages.nursingHome,
   overviewTitle: "Attentive care for our oldest neighbors.",
   overview: [
-    "Moving an older adult to and from a clinic can be exhausting — for the patient and for the family. Nursing-home visits remove that burden by bringing the physician to the facility instead. Dr. Nosa Lebarty, MD rounds at participating skilled nursing facilities across the Albany and Schenectady region, seeing patients where they already feel settled.",
+    "Moving an older adult to and from a clinic can be exhausting — for the patient and for the family. Nursing-home visits remove that burden by bringing the physician to the facility instead. Dr. Nosa Lebarty, MD rounds at participating skilled nursing facilities across Benin City and surrounding communities, seeing patients where they already feel settled.",
     "Older patients often live with several conditions at once, and their care needs steady, coordinated attention. Dr. Lebarty works closely with facility nursing staff and with families to keep medications, treatment plans, and goals of care aligned — so nothing falls through the cracks between visits.",
     "When a concern is routine, a telehealth assessment can answer it quickly without waiting for the next on-site round. When a patient needs to be seen in person, Dr. Lebarty is there. The aim is simple: consistent, unhurried care for the people who need it most.",
   ],
@@ -48,7 +48,7 @@ const content: ServiceContent = {
   faqs: [
     {
       q: "Which facilities does Dr. Lebarty visit?",
-      a: "Dr. Lebarty rounds at participating skilled nursing facilities across the Albany and Schenectady region. Call the office to ask whether a specific facility is covered.",
+      a: "Dr. Lebarty rounds at participating skilled nursing facilities across Benin City and surrounding communities. Call the office to ask whether a specific facility is covered.",
     },
     {
       q: "Can a family member request a visit?",

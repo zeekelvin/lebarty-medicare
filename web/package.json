@@ -1,8 +1,8 @@
 {
-  "name": "lebartymedical-web",
+  "name": "lebartymedicare-web",
   "version": "0.2.0",
   "private": true,
-  "description": "Lebarty Medical PLLC + Lebarty Community Health Foundation — cinematic website. Built by Zagaprime.",
+  "description": "Lebarty Medicare Hospital + Lebarty Community Health Foundation — cinematic website. Built by Zagaprime.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

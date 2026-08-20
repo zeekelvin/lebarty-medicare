@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Patients — what to know before your visit",
   description:
-    "New-patient information, what to bring, intake forms, and the patient portal for Lebarty Medical PLLC in Schenectady, NY.",
+    "New-patient information, what to bring, intake forms, and the patient portal for Lebarty Medicare Hospital in Benin City, Edo State.",
 };
 
 const whatToBring = [
@@ -66,7 +66,7 @@ export default function PatientsPage() {
     <>
       <PageHero
         image={assets.pages.patients}
-        imageAlt="A patient checking in at the welcoming front desk of Lebarty Medical"
+        imageAlt="A patient checking in at the welcoming front desk of Lebarty Medicare"
         eyebrow="Patients"
         title="Everything you need before your first visit."
         intro="Whether you're new to the practice, returning after time away, or joining us on telehealth, we've gathered the practical details in one calm place — so the only thing you have to focus on is your health."

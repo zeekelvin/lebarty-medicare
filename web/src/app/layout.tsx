@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
-import { MagneticCursor } from "@/components/ui/MagneticCursor";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { PageBackground } from "@/components/ui/PageBackground";
 import { MobileNav } from "@/components/ui/MobileNav";
@@ -33,19 +32,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Primary care, addiction medicine & telehealth in Schenectady, NY`,
+    default: `${site.name} — Primary care, addiction medicine & telehealth in Benin City, Edo State`,
     template: `%s · ${site.name}`,
   },
   description: site.shortDescription,
   applicationName: site.name,
   authors: [{ name: site.founder.name }],
   keywords: [
-    "family medicine Schenectady",
-    "addiction medicine Schenectady",
-    "Suboxone doctor Schenectady",
-    "telehealth primary care New York",
-    "civil surgeon Albany NY",
-    "Lebarty Medical",
+    "hospital in Benin City",
+    "family medicine Benin City",
+    "addiction medicine Benin City",
+    "telehealth primary care Nigeria",
+    "Lebarty Medicare Hospital",
+    "Lebarty Medicare",
     "community health foundation Africa",
   ],
   openGraph: {
@@ -90,7 +89,7 @@ const jsonLd = {
         postalCode: site.location.postalCode,
         addressCountry: site.location.country,
       },
-      areaServed: ["Schenectady", "Albany", "Capital Region", "New York"],
+      areaServed: ["Benin City", "Edo State", "Nigeria"],
       medicalSpecialty: [
         "Family Medicine",
         "Addiction Medicine",
@@ -111,7 +110,7 @@ const jsonLd = {
 
 const mobileLinks = [
   { href: "/services", label: "Services", n: "01" },
-  { href: "/about/dr-lebarty", label: "Dr. Lebarty", n: "02" },
+  { href: "/about/dr-lebarty", label: "About us", n: "02" },
   { href: "/patients", label: "Patients", n: "03" },
   { href: "/foundation", label: "Foundation", n: "04" },
   { href: "/resources", label: "Resources", n: "05" },
@@ -126,14 +125,13 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${inter.variable} ${geistMono.variable}`}
     >
-      <body className="has-cursor min-h-screen bg-bg text-fg antialiased">
+      <body className="min-h-screen bg-bg text-fg antialiased">
         <a href="#main" className="skip-link">
           Skip to main content
         </a>
 
         <PageBackground tone="care" intensity={0.5} />
         <SmoothScroll />
-        <MagneticCursor />
         <ScrollProgress />
         <Header />
         <MobileNav

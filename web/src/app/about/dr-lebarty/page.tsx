@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Dr. Nosa Lebarty — physician, civil surgeon, founder",
   description:
-    "Dr. Nosa Lebarty is the founding physician of Lebarty Medical PLLC and the Lebarty Community Health Foundation — board-certified in family medicine, a USCIS-designated civil surgeon, and faculty at Albany Medical College.",
+    "Dr. Nosa Lebarty is the founding physician of Lebarty Medicare Hospital and the Lebarty Community Health Foundation — board-certified in family medicine, a USCIS-designated civil surgeon, and faculty at Albany Medical College.",
 };
 
 const specialties = [
@@ -79,7 +79,7 @@ export default function DrLebartyPage() {
             </span>
           </>
         }
-        intro="Board-certified in family medicine, a USCIS-designated civil surgeon, medical director for two arms of Albany County government, and faculty at Albany Medical College — Dr. Lebarty built Lebarty Medical PLLC in Schenectady and the Lebarty Community Health Foundation to bring unhurried, competent care to everyone he can reach."
+        intro="Board-certified in family medicine, a USCIS-designated civil surgeon, medical director for two arms of Albany County government, and faculty at Albany Medical College — Dr. Lebarty built Lebarty Medicare Hospital in Benin City and the Lebarty Community Health Foundation to bring unhurried, competent care to everyone he can reach."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit
@@ -222,7 +222,7 @@ export default function DrLebartyPage() {
 
       <CTABand
         title="Care that knows your name."
-        body="New patients are welcome at Lebarty Medical. Book an in-person visit in Schenectady, or start with a secure telehealth appointment from wherever you are."
+        body="New patients are welcome at Lebarty Medicare. Book an in-person visit in Benin City, or start with a secure telehealth appointment from wherever you are."
       >
         <ButtonLink href="/book" size="lg">
           Book with Dr. Lebarty

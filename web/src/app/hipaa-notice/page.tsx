@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "HIPAA notice of privacy practices",
   description:
-    "How Lebarty Medical PLLC may use and disclose your protected health information, and your rights regarding that information.",
+    "How Lebarty Medicare Hospital may use and disclose your protected health information, and your rights regarding that information.",
 };
 
 export default function HipaaNoticePage() {
@@ -35,7 +35,7 @@ export default function HipaaNoticePage() {
 
           <h2>Our duties</h2>
           <p>
-            Lebarty Medical PLLC is required by law to maintain the privacy of
+            Lebarty Medicare Hospital is required by law to maintain the privacy of
             your protected health information, to provide you with this notice
             of our legal duties and privacy practices, and to follow the terms
             of the notice currently in effect. Protected health information is
