@@ -11,7 +11,29 @@ import {
   useTransform,
 } from "motion/react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { assets } from "@/lib/assets";
+
+/**
+ * Hero carousel slides — drop the corresponding files into /public/hero/.
+ * "contain" slides (text-dense graphics / portrait shots) render fully visible
+ * over a blurred fill; "cover" slides fill the frame edge-to-edge.
+ */
+const heroSlides = [
+  {
+    src: "/hero/slide-2.jpg",
+    alt: "Lebarty Medi-Care Hospital — Compassion. Excellence. Trust.",
+    fit: "contain",
+  },
+  {
+    src: "/hero/slide-3.jpg",
+    alt: "The Lebarty Medi-Care Hospital building in Benin City",
+    fit: "cover",
+  },
+  {
+    src: "/hero/slide-4.jpg",
+    alt: "Lebarty Medi-Care Hospital — delivering world-class healthcare",
+    fit: "contain",
+  },
+] as const;
 
 /**
  * Homepage film-card hero.
@@ -43,9 +65,26 @@ export function Hero() {
   const lightX = useTransform(sx, [-1, 1], [-80, 80]);
   const lightY = useTransform(sy, [-1, 1], [-40, 40]);
 
-  const [loopReady, setLoopReady] = useState(false);
-  const [loopExists, setLoopExists] = useState(true);
-  const [stillExists, setStillExists] = useState(true);
+  const [slide, setSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+
+  // Honor prefers-reduced-motion: no auto-advance, dots still work.
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => setAutoPlay(!mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+    const id = setInterval(
+      () => setSlide((s) => (s + 1) % heroSlides.length),
+      7000,
+    );
+    return () => clearInterval(id);
+  }, [autoPlay]);
 
   useEffect(() => {
     const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
@@ -74,35 +113,38 @@ export function Hero() {
           className="absolute inset-[-4%] will-change-transform"
           style={{ x: heroX, y: heroY }}
         >
-          {stillExists && assets.heroStill && (
-            <Image
-              src={assets.heroStill}
-              alt="A bright, welcoming Lebarty Medicare Hospital"
-              fill
-              priority
-              sizes="100vw"
-              onError={() => setStillExists(false)}
-              className={`object-cover object-center transition-opacity duration-1000 ${
-                loopReady ? "opacity-0" : "opacity-100"
+          {heroSlides.map((s, i) => (
+            <div
+              key={s.src}
+              aria-hidden={slide !== i}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                slide === i ? "opacity-100" : "opacity-0"
               }`}
-            />
-          )}
-          {loopExists && assets.heroLoop && (
-            <video
-              src={assets.heroLoop}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              poster={assets.heroStill || undefined}
-              onCanPlay={() => setLoopReady(true)}
-              onError={() => setLoopExists(false)}
-              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${
-                loopReady ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          )}
+            >
+              {s.fit === "contain" && (
+                <Image
+                  src={s.src}
+                  alt=""
+                  aria-hidden
+                  fill
+                  sizes="100vw"
+                  className="scale-110 object-cover object-center opacity-40 blur-2xl"
+                />
+              )}
+              <Image
+                src={s.src}
+                alt={s.alt}
+                fill
+                priority={i === 0}
+                sizes="100vw"
+                className={
+                  s.fit === "contain"
+                    ? "object-contain object-center"
+                    : "object-cover object-center"
+                }
+              />
+            </div>
+          ))}
         </motion.div>
 
         <motion.div style={{ opacity: overlayOpacity }} className="absolute inset-0">
@@ -158,11 +200,8 @@ export function Hero() {
               <span className="h-px w-10 bg-accent" />
               Lebarty Medicare &amp; Foundation
             </span>
-            <h1 className="mt-4 font-display text-[clamp(2.6rem,6.4vw,5.6rem)] leading-[0.98] tracking-tight text-fg">
-              Care that travels with you.
-              <span className="block text-accent">
-                Clinics that travel further.
-              </span>
+            <h1 className="mt-4 font-display text-[clamp(2.6rem,6.4vw,5.6rem)] leading-[0.98] tracking-tight text-[#C30B38]">
+              Your Health, Our Mission.
             </h1>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-fg/70 sm:text-base">
               An independent physician practice in Benin City — primary care,
@@ -184,6 +223,21 @@ export function Hero() {
           </div>
         </div>
       </motion.div>
+
+      {/* Carousel dots */}
+      <div className="absolute bottom-5 right-6 z-[10] flex items-center gap-2 sm:right-12">
+        {heroSlides.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Show hero slide ${i + 1}`}
+            onClick={() => setSlide(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              slide === i ? "w-6 bg-accent" : "w-2 bg-fg/25 hover:bg-fg/50"
+            }`}
+          />
+        ))}
+      </div>
 
       <motion.div
         aria-hidden

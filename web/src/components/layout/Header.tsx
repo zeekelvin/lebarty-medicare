@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { Logo } from "./Logo";
 import { navPrimary, site } from "@/lib/site";
@@ -14,6 +15,10 @@ import { cn } from "@/lib/cn";
  */
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  // Interior pages open on a dark hero band — the transparent state is only
+  // legible over the homepage hero, so everywhere else starts frosted.
+  const solid = scrolled || pathname !== "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -33,7 +38,7 @@ export function Header() {
         <div
           className={cn(
             "pointer-events-auto flex items-center justify-between gap-6 rounded-full px-5 py-2.5 transition-all duration-500",
-            scrolled
+            solid
               ? "border border-fg/10 bg-bg/85 shadow-[0_8px_30px_-12px_rgba(18,50,74,0.25)] backdrop-blur-md"
               : "border border-transparent bg-transparent",
           )}
