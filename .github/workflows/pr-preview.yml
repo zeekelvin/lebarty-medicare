@@ -1,0 +1,74 @@
+name: PR Preview
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: pr-preview-${{ github.event.number }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: web
+
+env:
+  PREVIEW_ALIAS: pr-${{ github.event.number }}
+  PREVIEW_URL: https://pr-${{ github.event.number }}-lebarty-medicare-staging.${{ vars.CF_WORKERS_SUBDOMAIN }}.workers.dev
+
+jobs:
+  preview:
+    name: Typecheck and preview
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: web/.node-version
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build Cloudflare worker
+        run: npx opennextjs-cloudflare build
+        env:
+          CLOUDFLARE_ENV: staging
+          NEXT_PUBLIC_SITE_ENV: staging
+          NEXT_PUBLIC_SITE_URL: ${{ env.PREVIEW_URL }}
+
+      - name: Upload preview version
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+        run: npx wrangler versions upload --env staging --preview-alias "${PREVIEW_ALIAS}"
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Comment preview URL
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          marker="<!-- lebarty-medicare-pr-preview -->"
+          body="$(printf '%s\n%s\n\n%s\n' "${marker}" "Cloudflare PR preview: ${PREVIEW_URL}" "Built with staging environment settings from PR #${{ github.event.number }}.")"
+          comment_id="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments" --jq '.[] | select(.body | contains("<!-- lebarty-medicare-pr-preview -->")) | .id' | head -n 1)"
+
+          if [ -n "${comment_id}" ]; then
+            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${comment_id}" -f body="${body}"
+          else
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments" -f body="${body}"
+          fi

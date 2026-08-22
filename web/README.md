@@ -143,13 +143,46 @@ Plus a manual pass with NVDA (Windows) and VoiceOver (Mac).
 
 ---
 
-## Deployment (Vercel)
+## Deployment (Cloudflare Workers)
 
-1. Push this repo to GitHub.
-2. Import in Vercel; framework auto-detects Next.js.
-3. Set environment variables (copy from `.env.example` and fill).
-4. Add custom domain `lebartymedicare.org`; Vercel handles SSL.
-5. **For Phase 2 PHI** (in-house portal): upgrade to Vercel Enterprise + sign BAA, and Supabase Team plan + HIPAA add-on.
+Deployments are controlled by GitHub Actions and Cloudflare Wrangler:
+
+- Pull requests to `main` run typecheck, build a Cloudflare Worker with staging settings, upload a per-PR preview version, and post a preview URL comment.
+- Merges to `main` deploy the persistent staging worker automatically.
+- Production deploys only after the `production` GitHub Environment receives manual approval.
+
+Production URL: `https://lebartymedicare.org`
+
+Staging URL: `https://lebarty-medicare-staging.<workers-subdomain>.workers.dev`
+
+PR preview URL format: `https://pr-<number>-lebarty-medicare-staging.<workers-subdomain>.workers.dev`
+
+Required GitHub repository secrets:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+Required GitHub repository variables:
+
+- `CF_WORKERS_SUBDOMAIN`
+
+Required GitHub environments:
+
+- `staging`: no required reviewer.
+- `production`: required reviewer approval enabled, deployment branch limited to `main`.
+
+Runtime secrets such as `STRIPE_SECRET_KEY` and `OPENAI_API_KEY` live in Cloudflare Workers, not GitHub. Set them with Wrangler, using `--env staging` for the staging worker.
+
+Bootstrap staging before the first PR preview:
+
+```bash
+npm run cf:build
+npx opennextjs-cloudflare deploy --env staging
+```
+
+`wrangler versions upload` requires the staging worker to exist first. Use `wrangler versions upload` only for PR previews; staging and production use `opennextjs-cloudflare deploy`.
+
+After the first successful GitHub Actions production deploy, disconnect the Cloudflare Workers Builds git integration in the Cloudflare dashboard. Leaving it connected would let pushes to `main` continue deploying directly to production and bypass the manual approval gate.
 
 ### Performance targets at launch
 - Lighthouse mobile: **95+** across all four categories

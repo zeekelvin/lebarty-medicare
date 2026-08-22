@@ -3,13 +3,17 @@
  * Edit values here and they propagate everywhere.
  */
 
+const configuredSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://lebartymedicare.org';
+const siteUrl = new URL(configuredSiteUrl).origin;
+
 export const site = {
   name: 'Lebarty Medicare',
   fullName: 'Lebarty Medicare Hospital & Lebarty Community Health Foundation',
   shortDescription:
     'Independent physician practice in Benin City, Edo State — primary care, addiction medicine, and telehealth — funding community clinics here and across Africa.',
-  url: 'https://lebartymedicare.org',
-  domain: 'lebartymedicare.org',
+  url: siteUrl,
+  domain: new URL(siteUrl).host,
   ogImage: '/og-image.png',
   founder: {
     name: 'Nosa Aigbe Lebarty, MD',
