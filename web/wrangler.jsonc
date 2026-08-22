@@ -10,5 +10,15 @@
   },
   "observability": {
     "enabled": true
+  },
+  "preview_urls": true,
+  "env": {
+    "staging": {
+      "workers_dev": true,
+      "preview_urls": true,
+      "vars": {
+        "APP_ENV": "staging"
+      }
+    }
   }
 }
