@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useInView,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { KenBurns } from "@/components/ui/KenBurns";
 import { assets } from "@/lib/assets";
 
 export function FoundationCallout() {
@@ -16,6 +21,11 @@ export function FoundationCallout() {
   const imgY = useTransform(scrollYProgress, [0, 1], ["8%", "-8%"]);
   const [videoExists, setVideoExists] = useState(true);
   const [videoReady, setVideoReady] = useState(false);
+  // Mount the (large) banner video well before the section arrives so it has
+  // time to buffer, but never for visitors who prefer reduced motion — they
+  // keep the calm gradient instead of an unpausable autoplay loop.
+  const nearViewport = useInView(ref, { once: true, margin: "1500px 0px" });
+  const reducedMotion = useReducedMotion();
 
   return (
     <section
@@ -29,22 +39,7 @@ export function FoundationCallout() {
         className="absolute inset-[-8%] z-0 will-change-transform"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#a30f54] via-[#f21872] to-[#7a0e40]" />
-        {assets.foundationStill && (
-          <div
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              videoReady ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            <KenBurns
-              src={assets.foundationStill}
-              alt="A Lebarty Community Health Foundation clinic in Africa"
-              variant={2}
-              duration={32}
-              sizes="100vw"
-            />
-          </div>
-        )}
-        {videoExists && assets.foundationLoop && (
+        {nearViewport && !reducedMotion && videoExists && assets.foundationLoop && (
           <video
             src={assets.foundationLoop}
             autoPlay
@@ -52,7 +47,6 @@ export function FoundationCallout() {
             loop
             playsInline
             preload="metadata"
-            poster={assets.foundationStill || undefined}
             onCanPlay={() => setVideoReady(true)}
             onError={() => setVideoExists(false)}
             className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${
@@ -98,7 +92,7 @@ export function FoundationCallout() {
         >
           The Foundation builds and supplies community health clinics in
           under-served villages across Africa. Funding starts with patient
-          visits in Benin City — every appointment is a quiet act of
+          visits in Benin City, and every appointment is a quiet act of
           solidarity with a community a world away.
         </motion.p>
 

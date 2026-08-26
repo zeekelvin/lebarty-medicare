@@ -16,6 +16,20 @@ const nextConfig = {
       { protocol: 'https', hostname: 'd8j0ntlcm91z4.cloudfront.net' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/services/civil-surgeon-uscis-exams',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/locations/schenectady',
+        destination: '/locations/benin-city',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

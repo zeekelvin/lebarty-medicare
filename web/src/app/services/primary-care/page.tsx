@@ -5,7 +5,7 @@ import { assets } from "@/lib/assets";
 export const metadata: Metadata = {
   title: "Primary Care in Benin City, Edo State",
   description:
-    "Annual physicals, chronic-condition management, vaccinations, and preventive care with Dr. Nosa Lebarty, MD. New patients welcome — most insurance accepted.",
+    "Annual physicals, chronic-condition management, vaccinations, and preventive care at Lebarty Medicare Hospital in Benin City. New patients welcome.",
   alternates: { canonical: "/services/primary-care" },
 };
 
@@ -13,28 +13,28 @@ const content: ServiceContent = {
   eyebrow: "Primary care · Benin City, Edo State",
   title: "A doctor who knows you.",
   intro:
-    "Annual physicals, chronic disease management, vaccinations, screenings, lab work, and referrals — all coordinated by a physician who has time for the conversation. Primary care is the home base for your health, and Dr. Lebarty builds it around continuity, not minutes-per-visit.",
+    "Annual physicals, chronic disease management, vaccinations, screenings, lab work, and referrals, all coordinated by a physician who has time for the conversation. Primary care is the home base for your health, and Dr. Lebarty builds it around continuity, not minutes-per-visit.",
   heroImage: assets.pages.primaryCare,
   overviewTitle: "Care that follows the whole story.",
   overview: [
-    "Good primary care is less about any single visit and more about the relationship behind all of them. When the same physician sees you year after year, patterns become visible — a slow rise in blood pressure, a medication that stopped working, a worry you mentioned once and then again. That continuity is what catches problems early.",
+    "Good primary care is less about any single visit and more about the relationship behind all of them. When the same physician sees you year after year, patterns become visible: a slow rise in blood pressure, a medication that stopped working, a worry you mentioned once and then again. That continuity is what catches problems early.",
     "Dr. Nosa Lebarty, MD is board-certified in Family Medicine, which means one physician can care for nearly everyone in your household, from young adults to grandparents. Visits are unhurried on purpose, so there is room to ask the question you almost did not bring up.",
-    "Your chart stays in one place. Whether you are seen in the office or on a telehealth follow-up, it is the same doctor reading the same history — no repeating yourself, no gaps between providers.",
+    "Your chart stays in one place. Whether you are seen in the office or on a telehealth follow-up, it is the same doctor reading the same history: no repeating yourself, no gaps between providers.",
   ],
   featureImage: assets.services["primary-care"],
   expectTitle: "What your primary-care relationship includes.",
   expect: [
     "Annual physicals and wellness visits with time to talk",
-    "Chronic-condition management — diabetes, hypertension, asthma, thyroid, and more",
+    "Chronic-condition management: diabetes, hypertension, asthma, thyroid, and more",
     "Vaccinations and age-appropriate screenings",
     "In-house lab work and coordinated outside testing",
     "Same-week appointments for new patients",
-    "Coordinated referrals to trusted specialists across the Capital Region",
+    "Coordinated referrals to trusted specialists across Benin City",
   ],
   steps: [
     {
       title: "Reach out",
-      body: "Call the office or book online. We will gather a little history and find an appointment that fits — usually within the week.",
+      body: "Call the office or book online. We will gather a little history and find an appointment that fits, usually within the week.",
     },
     {
       title: "Your first visit",
@@ -42,7 +42,7 @@ const content: ServiceContent = {
     },
     {
       title: "Stay connected",
-      body: "Follow-ups, refills, and routine check-ins continue in the office or on telehealth — same physician, same chart, every time.",
+      body: "Follow-ups, refills, and routine check-ins continue in the office or on telehealth: same physician, same chart, every time.",
     },
   ],
   faqs: [
@@ -52,7 +52,7 @@ const content: ServiceContent = {
     },
     {
       q: "What should I bring to my first visit?",
-      a: "Bring a photo ID, your insurance card, a list of current medications and doses, and any recent test results or records you have. If you cannot gather everything, come anyway — we can request records on your behalf.",
+      a: "Bring a photo ID, any HMO or insurance details, a list of current medications and doses, and any recent test results or records you have. If you cannot gather everything, come anyway. We can request records on your behalf.",
     },
     {
       q: "Can I manage a chronic condition here?",
@@ -64,7 +64,7 @@ const content: ServiceContent = {
     },
     {
       q: "What insurance do you accept?",
-      a: "The practice accepts Medicare, Medicaid Managed Care, and most major commercial plans. If you are unsure about your coverage, call the office and we will help you check.",
+      a: "We accept cash, card, and bank transfer, and the front desk can confirm HMO or insurance cover before your visit. Call and we will help you check.",
     },
   ],
   related: [
@@ -75,7 +75,7 @@ const content: ServiceContent = {
     },
     {
       title: "Telehealth",
-      body: "Secure video visits for follow-ups, refills, and questions — the same physician, wherever you are.",
+      body: "Secure video visits for follow-ups, refills, and questions, with the same physician wherever you are.",
       href: "/services/telehealth",
     },
     {

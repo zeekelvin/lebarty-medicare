@@ -99,6 +99,9 @@ export function MobileNav({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site menu"
             className="fixed inset-0 z-[70] lg:hidden"
           >
             <motion.div
@@ -110,7 +113,10 @@ export function MobileNav({
             />
             <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg to-muted" />
 
-            <div className="relative z-[1] flex h-full flex-col justify-between px-6 py-12">
+            <div
+              data-lenis-prevent
+              className="relative z-[1] flex h-full flex-col justify-between overflow-y-auto px-6 py-12"
+            >
               <div>
                 <motion.span
                   initial={{ opacity: 0, y: -10 }}

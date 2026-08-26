@@ -25,7 +25,7 @@ export function Footer() {
               <li><Link href="/services/primary-care" className="transition-colors hover:text-brand">Primary care</Link></li>
               <li><Link href="/services/addiction-medicine" className="transition-colors hover:text-brand">Addiction medicine</Link></li>
               <li><Link href="/services/telehealth" className="transition-colors hover:text-brand">Telehealth</Link></li>
-              <li><Link href="/services/civil-surgeon-uscis-exams" className="transition-colors hover:text-brand">USCIS exams</Link></li>
+              <li><Link href="/services/laboratory" className="transition-colors hover:text-brand">Laboratory</Link></li>
               <li><Link href="/services" className="transition-colors hover:text-brand">All services</Link></li>
             </ul>
           </div>
@@ -36,8 +36,6 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li><Link href="/foundation" className="transition-colors hover:text-brand">Our mission</Link></li>
-              <li><Link href="/foundation/programs" className="transition-colors hover:text-brand">Programs</Link></li>
-              <li><Link href="/foundation/impact" className="transition-colors hover:text-brand">Impact</Link></li>
               <li><Link href="/foundation/donate" className="transition-colors hover:text-brand">Donate</Link></li>
             </ul>
           </div>
@@ -48,7 +46,8 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li><Link href="/book" className="transition-colors hover:text-brand">Book a visit</Link></li>
-              <li><Link href="/patients/insurance" className="transition-colors hover:text-brand">Insurance</Link></li>
+              <li><Link href="/care-packages" className="transition-colors hover:text-brand">Care packages</Link></li>
+              <li><Link href="/patients/insurance" className="transition-colors hover:text-brand">Payment &amp; billing</Link></li>
               <li><Link href="/patients" className="transition-colors hover:text-brand">Patient portal</Link></li>
               <li><Link href="/locations/benin-city" className="transition-colors hover:text-brand">Location &amp; hours</Link></li>
             </ul>

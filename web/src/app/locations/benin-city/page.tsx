@@ -32,7 +32,7 @@ export default function BeninCityLocationPage() {
         imageAlt="The exterior of Lebarty Medicare Hospital in Benin City, Edo State"
         eyebrow="Visit us"
         title="Our Benin City hospital."
-        intro="Find us along Ugo Ben Road, by Festus Ajayi Junction, Irhirhi Road — in Aruogba Community, off Airport Road. Free on-site parking and a calm, welcoming entrance built for a low-key visit. Can't make it in today? Telehealth is available."
+        intro="Find us along Ugo Ben Road, by Festus Ajayi Junction, Irhirhi Road, in Aruogba Community, off Airport Road. Free on-site parking and a calm, welcoming entrance built for a low-key visit. Can't make it in today? Telehealth is available."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit
@@ -53,11 +53,11 @@ export default function BeninCityLocationPage() {
             The Benin City office was designed to feel less like a busy clinic
             and more like a place to breathe. Natural light, comfortable
             seating, and private exam rooms set the tone for the kind of care
-            we believe in — continuity over minutes-per-visit.
+            we believe in: continuity over minutes-per-visit.
           </p>
           <p>
             Whether you're here for an annual physical, ongoing primary care, a
-            USCIS civil surgeon exam, or addiction medicine, you'll see the same
+            lab test, or addiction medicine, you'll see the same
             physician each time, working from the same chart. Telehealth visits
             connect to that same continuity from wherever you are.
           </p>
@@ -133,8 +133,8 @@ export default function BeninCityLocationPage() {
                 ))}
               </ul>
               <p className="mt-5 text-sm leading-relaxed text-fg/60">
-                Holiday hours may vary. For urgent medical issues call 911 — for
-                crisis support, dial or text 988.
+                Holiday hours may vary. For urgent medical issues, call 112
+                (emergency services) or the hospital line right away.
               </p>
             </div>
           </Reveal>
@@ -172,9 +172,9 @@ export default function BeninCityLocationPage() {
               </h2>
               <div className="mt-5 space-y-4 text-base leading-relaxed text-fg/75">
                 <p>
-                  The clinic sits in Aruogba Community, off Airport Road — along
-                  Ugo Ben Road by Festus Ajayi Junction — with free parking right
-                  outside the entrance — no garages, no meters, no circling the
+                  The clinic sits in Aruogba Community, off Airport Road, along
+                  Ugo Ben Road by Festus Ajayi Junction. Free parking is right
+                  outside the entrance: no garages, no meters, no circling the
                   block. Accessible spaces are located closest to the door.
                 </p>
                 <p>

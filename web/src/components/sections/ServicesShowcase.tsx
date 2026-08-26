@@ -29,7 +29,7 @@ const SERVICES: Service[] = [
     slug: "primary-care",
     category: "For your whole life",
     title: "Primary Care",
-    tagline: "Annual physicals, chronic care, screenings — with continuity.",
+    tagline: "Annual physicals, chronic care, screenings, all with continuity.",
     span: "wide",
     bullets: ["Annual physicals & wellness", "Chronic condition management", "Same-week new patients"],
   },
@@ -37,7 +37,7 @@ const SERVICES: Service[] = [
     slug: "telehealth",
     category: "Care that travels",
     title: "Telehealth",
-    tagline: "Secure video visits, anywhere in New York.",
+    tagline: "Secure video visits, wherever you are.",
     span: "square",
     bullets: ["HIPAA-secure video", "Evening slots", "Same physician, same chart"],
   },
@@ -47,23 +47,23 @@ const SERVICES: Service[] = [
     title: "Addiction Medicine",
     tagline: "Suboxone & medication-assisted treatment. No stigma, ever.",
     span: "feature",
-    bullets: ["Suboxone / buprenorphine", "Telehealth induction available", "Same-week, Medicaid accepted"],
+    bullets: ["Suboxone / buprenorphine", "Telehealth induction available", "Same-week appointments"],
   },
   {
     slug: "nursing-home-visits",
     category: "For our oldest neighbors",
     title: "Nursing Home Visits",
-    tagline: "On-site and telehealth assessments across the Capital Region.",
+    tagline: "On-site and telehealth assessments across Benin City.",
     span: "square",
     bullets: ["On-site physician rounds", "Telehealth follow-ups", "Family coordination"],
   },
   {
-    slug: "civil-surgeon-uscis-exams",
-    category: "USCIS designated",
-    title: "Civil Surgeon Exams",
-    tagline: "Form I-693 immigration medical exams — done right, in one visit.",
+    slug: "laboratory",
+    category: "Diagnostics",
+    title: "Laboratory",
+    tagline: "Lab tests and results, handled under one roof.",
     span: "square",
-    bullets: ["Form I-693 examination", "Vaccinations on site", "Sealed envelope returned"],
+    bullets: ["Blood work & urinalysis", "Screening support", "Results explained clearly"],
   },
   {
     slug: "preventive-care",
@@ -101,13 +101,13 @@ export function ServicesShowcase() {
               The Services · 06 ways we care
             </span>
             <h2 className="mt-4 font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] text-fg">
-              <span className="block">Everything one</span>
-              <span className="block text-accent">physician can be.</span>
+              <span className="block">One team.</span>
+              <span className="block text-accent">Every kind of care.</span>
             </h2>
           </div>
           <p className="max-w-md text-sm text-fg/65 sm:text-base">
             Walk in, log on, or we come to you. Whichever you choose, you keep
-            the same physician and the same chart — care that never makes you
+            the same physician and the same chart: care that never makes you
             start over.
           </p>
         </div>

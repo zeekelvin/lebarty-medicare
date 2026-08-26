@@ -6,22 +6,22 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { CTABand } from "@/components/site/CTABand";
 import { assets } from "@/lib/assets";
-import { site, insurance } from "@/lib/site";
+import { site, paymentOptions } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Insurance & billing",
+  title: "Payment & billing",
   description:
-    "Lebarty Medicare accepts Medicare, Medicaid Managed Care, and most major commercial plans. Insurance, self-pay rates, and billing for our Benin City, Edo State practice.",
+    "Ways to pay at Lebarty Medicare Hospital in Benin City: cash, card, bank transfer, prepaid care packages, and HMO/insurance confirmed by the front desk.",
 };
 
 const billingNotes = [
   {
-    title: "We verify before your visit",
-    body: "Once we have your plan details, we confirm your coverage and any copay ahead of time — so you know what to expect before you walk in.",
+    title: "Confirm before your visit",
+    body: "Call the front desk with your HMO or plan details and we confirm your cover and expected costs ahead of time, so you know what to expect before you walk in.",
   },
   {
-    title: "Transparent self-pay rates",
-    body: "No insurance? We offer clear, upfront self-pay pricing for visits, telehealth, and Suboxone treatment. Ask the office for a current rate sheet.",
+    title: "Transparent rates",
+    body: "Paying directly? We offer clear, upfront pricing for visits, telehealth, lab tests, and care packages. Ask the front desk for current rates.",
   },
   {
     title: "Statements and payment plans",
@@ -36,11 +36,11 @@ export default function InsurancePage() {
         image={assets.pages.patients}
         imageAlt="A patient reviewing coverage details with staff at the Lebarty Medicare front desk"
         eyebrow="Patients"
-        title="Insurance & billing"
-        intro="We accept Medicare, Medicaid Managed Care, and most major commercial plans — and we verify your benefits before your visit so there are no surprises. If your plan isn't listed, call us. We'll check."
+        title="Payment & billing"
+        intro="Straightforward ways to pay: cash, card, bank transfer, and prepaid care packages, with costs confirmed before your visit so there are no surprises. Using an HMO or insurance plan? Call the front desk and we'll check your cover."
       >
         <ButtonLink href="/contact" size="lg">
-          Verify my plan
+          Confirm my cover
         </ButtonLink>
         <ButtonLink href="/book" size="lg" variant="secondary">
           Book a visit
@@ -49,12 +49,12 @@ export default function InsurancePage() {
 
       <Section>
         <SectionHeading
-          eyebrow="Plans accepted"
-          title="Insurance we work with."
-          intro="This list covers the plans we accept most often. Networks change, so we always confirm your specific coverage before your appointment."
+          eyebrow="Ways to pay"
+          title="Payment options."
+          intro="Choose whichever works for you. HMO and insurance arrangements are confirmed by the front desk before your appointment."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {insurance.map((name, i) => (
+          {paymentOptions.map((name, i) => (
             <Reveal key={name} delay={i * 0.04}>
               <div className="flex h-full items-center gap-3 rounded-2xl border border-fg/10 bg-muted/60 p-5">
                 <span
@@ -70,10 +70,9 @@ export default function InsurancePage() {
         </div>
         <Reveal delay={0.1}>
           <p className="mt-8 max-w-2xl text-sm leading-relaxed text-fg/60">
-            Don't see your plan? That doesn't mean we can't help. Many plans
-            include out-of-network benefits, and new contracts are added
-            regularly. Send us your plan name and we'll verify it before you
-            book.
+            Not sure how you'd like to pay, or whether your HMO or plan is
+            covered? Send us the details and the front desk will confirm your
+            options before you book.
           </p>
         </Reveal>
       </Section>
@@ -82,7 +81,7 @@ export default function InsurancePage() {
         <SectionHeading
           eyebrow="Billing"
           title="Clear costs, no surprises."
-          intro="Healthcare billing should be understandable. Here's how we keep it straightforward — and what to do if you're not sure where your plan fits."
+          intro="Healthcare billing should be understandable. Here's how we keep it straightforward, and what to do if you're not sure where your plan fits."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-3">
           {billingNotes.map((b, i) => (
@@ -102,16 +101,16 @@ export default function InsurancePage() {
         <Reveal delay={0.12}>
           <div className="mt-8 rounded-2xl bg-[#0b1f30] p-8 text-white sm:p-10">
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-brand">
-              Plan not listed?
+              Unsure about costs?
             </p>
             <h3 className="mt-3 font-display text-2xl leading-snug text-white">
-              Call the office before you book.
+              Call the front desk before you book.
             </h3>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/80">
               The simplest way to know exactly what your visit will cost is to
-              ask. Call us with your plan name and member ID, and we'll confirm
-              whether you're covered, what your copay will be, and what your
-              options are if you're out of network. No commitment, no pressure.
+              ask. Call with the service you need, or with your HMO or plan
+              details, and we'll confirm current rates, what's covered, and your payment
+              options. No commitment, no pressure.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <ButtonLink href={`tel:${site.contact.phoneTel}`} size="md">
@@ -126,11 +125,11 @@ export default function InsurancePage() {
       </Section>
 
       <CTABand
-        title="Questions about coverage?"
-        body="We'll verify your benefits and explain your costs before you ever sit down in an exam room. Reach out and we'll take care of it."
+        title="Questions about costs?"
+        body="We'll confirm your payment options and explain your costs before you ever sit down in an exam room. Reach out and we'll take care of it."
       >
         <ButtonLink href="/contact" size="lg">
-          Verify my plan
+          Confirm my cover
         </ButtonLink>
         <ButtonLink
           href={`tel:${site.contact.phoneTel}`}

@@ -25,7 +25,7 @@ export default function ContactPage() {
         imageAlt="The welcoming front desk and waiting area at Lebarty Medicare"
         eyebrow="Contact"
         title="Talk to a real person."
-        intro="Monday through Friday, 8 AM to 6 PM WAT. Most messages are returned the same business day. For urgent medical issues call 911 — for crisis support, dial or text 988."
+        intro="Monday through Friday, 8 AM to 6 PM WAT. Most messages are returned the same business day. For urgent medical issues, call 112 (emergency services) or the hospital line right away."
       >
         <ButtonLink href={`tel:${site.contact.phoneTel}`} size="lg">
           Call {site.contact.phoneDisplay}
@@ -39,7 +39,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Get in touch"
           title="Send a message or reach us directly."
-          intro="Use the form for general questions and appointment requests. Please keep personal health details out of the form — it is not a secure channel. We will follow up by phone or through your secure patient portal."
+          intro="Use the form for general questions and appointment requests. Please keep personal health details out of the form, as it is not a secure channel. We will follow up by phone or through your secure patient portal."
         />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-12">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { impactStats } from "@/lib/site";
 import { PageHero } from "@/components/ui/PageHero";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/site/Section";
@@ -24,7 +25,7 @@ const programs = [
   {
     eyebrow: "Program two",
     title: "Mobile Outreach",
-    body: "Teams of physicians, nurses, and community health workers bring medicine, vaccinations, and screenings directly to communities that haven't seen a doctor in a year — sometimes longer.",
+    body: "Teams of physicians, nurses, and community health workers bring medicine, vaccinations, and screenings directly to communities that haven't seen a doctor in a year, sometimes longer.",
     image: assets.foundationPrograms["mobile-outreach"],
   },
   {
@@ -36,17 +37,16 @@ const programs = [
   {
     eyebrow: "Program four",
     title: "Medical Education",
-    body: "We sponsor local nurses and community health workers through training, then equip them to lead the next clinic — the long, lasting way to make our own work unnecessary.",
+    body: "We sponsor local nurses and community health workers through training, then equip them to lead the next clinic. It is the long, lasting way to make our own work unnecessary.",
     image: assets.foundationPrograms["medical-education"],
   },
 ];
 
-const impact = [
-  { figure: "12+", label: "Communities served" },
-  { figure: "4", label: "Countries reached" },
-  { figure: "6,400+", label: "Patient encounters" },
-  { figure: "100%", label: "Of donations to programs" },
-];
+// Derived from the shared impactStats so the homepage and this page can't drift.
+const impact = impactStats.map((s) => ({
+  figure: `${s.value}${s.suffix}`,
+  label: s.label,
+}));
 
 export default function FoundationPage() {
   return (
@@ -61,7 +61,7 @@ export default function FoundationPage() {
             <span className="block italic text-brand">Clinics there.</span>
           </>
         }
-        intro="Founded by Dr. Nosa Lebarty, the Foundation is a humanitarian extension of his clinical practice — building community health clinics in under-served villages across Africa, supplying them with the medicine and equipment they need, and training the local health workers who keep them running."
+        intro="Founded by Dr. Nosa Lebarty, the Foundation is a humanitarian extension of his clinical practice: building community health clinics in under-served villages across Africa, supplying them with the medicine and equipment they need, and training the local health workers who keep them running."
       >
         <ButtonLink href="/foundation/donate" size="lg">
           Donate
@@ -79,8 +79,8 @@ export default function FoundationPage() {
           />
           <div className="space-y-5 text-base leading-relaxed text-fg/75">
             <p>
-              The same belief that shapes every visit in Benin City — that
-              every person deserves a competent, unhurried doctor — does not
+              The same belief shapes every visit in Benin City: every person
+              deserves a competent, unhurried doctor. That belief does not
               stop at a city limit or a national border. The Lebarty Community
               Health Foundation carries that promise to the places where care
               is hardest to reach.
@@ -88,9 +88,9 @@ export default function FoundationPage() {
             <p>
               We focus on the most preventable causes of death in the
               communities we serve: infectious disease, maternal mortality, and
-              untreated chronic conditions. And we build local capacity — the
-              clinics, the supplies, and the trained health workers — that can
-              outlast any single visit from us.
+              untreated chronic conditions. And we build local capacity that
+              can outlast any single visit from us: the clinics, the supplies,
+              and the trained health workers.
             </p>
             <p>
               Patient care at the practice and the generosity of donors fund
@@ -104,7 +104,7 @@ export default function FoundationPage() {
         <SectionHeading
           eyebrow="Programs"
           title="Four ways the Foundation works."
-          intro="Each program tackles a different gap in care — but all of them are built to leave something behind that keeps working after the team has gone."
+          intro="Each program tackles a different gap in care, but all of them are built to leave something behind that keeps working after the team has gone."
         />
         <div className="mt-12">
           <CardGrid items={programs} columns={2} />
@@ -116,7 +116,7 @@ export default function FoundationPage() {
           tone="dark"
           eyebrow="Impact to date"
           title="By the numbers."
-          intro="A snapshot of the Foundation's reach. These figures are placeholders and will be replaced with the Foundation's verified totals during the content pass."
+          intro="A snapshot of the Foundation's reach."
         />
         <div className="mt-12">
           <StatStrip items={impact} tone="dark" />
@@ -125,7 +125,7 @@ export default function FoundationPage() {
 
       <CTABand
         title="You can help build the next clinic."
-        body="The Foundation runs on regular donors and volunteers — physicians, nurses, students, and community members. Whether you have $5 a month or two weeks of vacation, there is a place for you."
+        body="The Foundation runs on regular donors and volunteers: physicians, nurses, students, and community members. Whether you have $5 a month or two weeks of vacation, there is a place for you."
       >
         <ButtonLink href="/foundation/donate" size="lg">
           Donate

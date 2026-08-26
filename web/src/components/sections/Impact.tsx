@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
+import { impactStats } from "@/lib/site";
 
 type Stat = {
   value: number;
@@ -11,12 +12,7 @@ type Stat = {
   sub: string;
 };
 
-const STATS: Stat[] = [
-  { value: 6400, suffix: "+", label: "Patient encounters", sub: "Across the Foundation's outreach programs" },
-  { value: 12, suffix: "+", label: "Communities served", sub: "Village clinics built and supplied" },
-  { value: 4, label: "Countries reached", sub: "And growing each year" },
-  { value: 100, suffix: "%", label: "Of donations to programs", sub: "Every dollar funds the work" },
-];
+const STATS: Stat[] = [...impactStats];
 
 function CountUp({ stat }: { stat: Stat }) {
   const ref = useRef<HTMLSpanElement | null>(null);
@@ -40,7 +36,12 @@ function CountUp({ stat }: { stat: Stat }) {
       if (t < 1) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
+    // rAF is paused in background tabs — make sure the final value always lands.
+    const settle = window.setTimeout(() => setDisplay(stat.value), duration + 250);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.clearTimeout(settle);
+    };
   }, [inView, stat.value]);
 
   return (
@@ -95,10 +96,6 @@ export function Impact() {
             </motion.div>
           ))}
         </div>
-
-        <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-fg/40">
-          Figures are placeholders pending the Foundation's verified numbers.
-        </p>
       </div>
     </section>
   );

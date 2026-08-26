@@ -46,7 +46,7 @@ export async function POST(req: Request) {
                   currency: 'usd',
                   recurring: { interval: 'month' },
                   product_data: {
-                    name: 'Lebarty Foundation — monthly donation',
+                    name: 'Lebarty Foundation monthly donation',
                   },
                   unit_amount: amount,
                 },
@@ -60,7 +60,7 @@ export async function POST(req: Request) {
                 price_data: {
                   currency: 'usd',
                   product_data: {
-                    name: 'Lebarty Foundation — donation',
+                    name: 'Lebarty Foundation donation',
                   },
                   unit_amount: amount,
                 },

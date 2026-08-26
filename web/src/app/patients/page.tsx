@@ -19,15 +19,15 @@ export const metadata: Metadata = {
 const whatToBring = [
   {
     title: "A photo ID",
-    body: "A driver's license, state ID, or passport — anything that confirms your name and date of birth.",
+    body: "A driver's license, state ID, or passport: anything that confirms your name and date of birth.",
   },
   {
-    title: "Your insurance card",
-    body: "Bring the physical card if you have one. We verify your coverage before the visit so there are no surprises.",
+    title: "Your HMO or insurance details",
+    body: "If you have an HMO or insurance plan, bring the details along. The front desk confirms your cover before the visit so there are no surprises.",
   },
   {
     title: "A current medication list",
-    body: "Include prescriptions, over-the-counter medicines, vitamins, and supplements — names and doses if you have them.",
+    body: "Include prescriptions, over-the-counter medicines, vitamins, and supplements, with names and doses if you have them.",
   },
   {
     title: "Records from past care",
@@ -35,11 +35,11 @@ const whatToBring = [
   },
   {
     title: "Your questions",
-    body: "Write down anything on your mind before you arrive. The visit is yours — nothing is too small to ask about.",
+    body: "Write down anything on your mind before you arrive. The visit is yours, and nothing is too small to ask about.",
   },
   {
-    title: "For a USCIS exam",
-    body: "Bring your vaccination records and Form I-693. See the civil surgeon service page for the full checklist.",
+    title: "An emergency contact",
+    body: "The name and phone number of someone we can reach if we ever need to. It takes a minute and matters when it matters.",
   },
 ];
 
@@ -57,7 +57,7 @@ const steps = [
   {
     eyebrow: "Step three",
     title: "Meet your physician",
-    body: "Most new patients are seen within seven days. Your first visit is unhurried — time to talk through your history and build a plan.",
+    body: "Most new patients are seen within seven days. Your first visit is unhurried: time to talk through your history and build a plan.",
   },
 ];
 
@@ -69,13 +69,13 @@ export default function PatientsPage() {
         imageAlt="A patient checking in at the welcoming front desk of Lebarty Medicare"
         eyebrow="Patients"
         title="Everything you need before your first visit."
-        intro="Whether you're new to the practice, returning after time away, or joining us on telehealth, we've gathered the practical details in one calm place — so the only thing you have to focus on is your health."
+        intro="Whether you're new to the practice, returning after time away, or joining us on telehealth, we've gathered the practical details in one calm place, so the only thing you have to focus on is your health."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit
         </ButtonLink>
         <ButtonLink href="/patients/insurance" size="lg" variant="secondary">
-          Insurance &amp; billing
+          Payment &amp; billing
         </ButtonLink>
       </PageHero>
 
@@ -83,7 +83,7 @@ export default function PatientsPage() {
         <SectionHeading
           eyebrow="Before you arrive"
           title="What to bring to a first visit."
-          intro="A little preparation makes your first appointment smoother. None of it is required to be seen — bring what you can, and we'll help with the rest."
+          intro="A little preparation makes your first appointment smoother. None of it is required to be seen. Bring what you can, and we'll help with the rest."
         />
         <div className="mt-12">
           <CardGrid
@@ -174,7 +174,7 @@ export default function PatientsPage() {
               <p className="mt-4 text-sm leading-relaxed text-fg/75">
                 Intake covers your medical history, current medications,
                 allergies, and the reason for your visit. If anything is
-                unclear, leave it blank — we'll finish it together.
+                unclear, leave it blank and we'll finish it together.
               </p>
               <p className="mt-6 text-sm leading-relaxed text-fg/60">
                 Questions about forms or what to expect? Reach the office and a
@@ -193,16 +193,16 @@ export default function PatientsPage() {
           <Reveal className="lg:col-span-7">
             <div>
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-                Insurance &amp; billing
+                Payment &amp; billing
               </p>
               <h2 className="mt-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.1] tracking-tight text-fg">
                 Coverage you can count on, costs you can see clearly.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-fg/70">
-                We accept Medicare, Medicaid Managed Care, and most major
-                commercial plans, and we verify your benefits before the visit.
-                Without insurance? We offer transparent self-pay rates. See the
-                full list and our billing details.
+                Pay by cash, card, or bank transfer, or with a prepaid care
+                package. Using an HMO or insurance plan? The front desk
+                confirms your cover before the visit. See all payment options
+                and our billing details.
               </p>
             </div>
           </Reveal>
@@ -212,14 +212,14 @@ export default function PatientsPage() {
               className="group block rounded-2xl border border-fg/10 bg-bg p-7 transition-colors hover:border-accent/40"
             >
               <p className="font-display text-xl text-fg">
-                Insurance &amp; billing
+                Payment &amp; billing
               </p>
               <p className="mt-2 text-sm leading-relaxed text-fg/70">
                 Accepted plans, self-pay rates, and what to do if your plan
                 isn't listed.
               </p>
               <span className="mt-4 inline-block text-sm font-medium text-accent">
-                View insurance &amp; billing &rarr;
+                View payment &amp; billing &rarr;
               </span>
             </Link>
           </Reveal>

@@ -60,7 +60,7 @@ export default function HipaaNoticePage() {
             <li>
               <strong>Payment.</strong> We may use and disclose your health
               information to bill and obtain payment for the services you
-              receive — for example, by sending claims to your insurance plan.
+              receive, for example by sending claims to your insurance plan.
             </li>
             <li>
               <strong>Health care operations.</strong> We may use your

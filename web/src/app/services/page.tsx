@@ -11,7 +11,7 @@ import { services, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Primary care, addiction medicine, telehealth, nursing-home visits, USCIS civil surgeon exams, and preventive care — all from one physician in Benin City, Edo State.",
+    "Primary care, addiction medicine, telehealth, nursing-home visits, laboratory, and preventive care, all under one roof in Benin City, Edo State.",
 };
 
 export default function ServicesIndexPage() {
@@ -19,8 +19,8 @@ export default function ServicesIndexPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Everything one physician can be."
-        intro="Whether you are coming in for a physical, starting Suboxone, joining a video visit, or scheduling an immigration exam, you stay with the same physician and the same chart. No handoffs, no starting over — just continuous care built around your life."
+        title="Everything a hospital should be."
+        intro="Whether you are coming in for a physical, starting Suboxone, joining a video visit, or getting lab work done, your care stays in one chart with one team. No handoffs, no starting over. Just continuous care built around your life."
         image={assets.pages.servicesHero}
         imageAlt="Dr. Lebarty meeting with a patient in a bright, calm exam room"
       >
@@ -39,8 +39,8 @@ export default function ServicesIndexPage() {
       <Section>
         <SectionHeading
           eyebrow="Our care"
-          title="Six services. One physician."
-          intro="Each of these is delivered personally by Dr. Nosa Lebarty, MD — a board-certified family physician. Together they cover most of what a household needs from a doctor, coordinated under a single plan of care."
+          title="All services. One team."
+          intro="Delivered by our board-certified physicians and clinical team, these services cover most of what a household needs from a hospital, coordinated under a single plan of care."
         />
         <div className="mt-12">
           <CardGrid
