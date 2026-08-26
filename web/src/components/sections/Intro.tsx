@@ -4,8 +4,8 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
 const STATS = [
-  { figure: "3", label: "Board-certified specialties" },
-  { figure: "100%", label: "Telehealth across New York" },
+  { figure: "6+", label: "Board-certified specialists" },
+  { figure: "100%", label: "Telehealth availability" },
   { figure: "12+", label: "Communities reached in Africa" },
 ];
 
@@ -59,11 +59,12 @@ export function Intro() {
           className="flex flex-col justify-end lg:col-span-5"
         >
           <p className="text-base leading-relaxed text-fg/70 sm:text-lg">
-            Lebarty Medicare was founded by Dr. Nosa Lebarty — board-certified in
-            family medicine, a USCIS civil surgeon, and medical director for
-            Albany County. He built the practice and the Lebarty Community
-            Health Foundation on one belief: every person, wherever they are,
-            deserves an unhurried, competent doctor.
+            Lebarty Medi-Care Hospital was built on a simple conviction:
+            excellent care should never feel out of reach. Our physicians,
+            nurses, and support teams pair modern medicine with old-fashioned
+            attentiveness: care that is skilled without being cold, affordable
+            without being rushed, and personal from the front door to the
+            follow-up.
           </p>
         </motion.div>
       </div>

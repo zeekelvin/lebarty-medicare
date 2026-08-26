@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Accessibility statement",
   description:
-    "Our commitment to digital accessibility — WCAG 2.1 Level AA, the steps we take, and how to give us feedback.",
+    "Our commitment to digital accessibility: WCAG 2.1 Level AA, the steps we take, and how to give us feedback.",
 };
 
 export default function AccessibilityPage() {
@@ -16,7 +16,7 @@ export default function AccessibilityPage() {
       <PageHero
         eyebrow="Legal"
         title="Accessibility statement"
-        intro="Care should be accessible to everyone — and so should our website. If anything here does not work for you, please tell us and we will fix it."
+        intro="Care should be accessible to everyone, and so should our website. If anything here does not work for you, please tell us and we will fix it."
       />
 
       <Section width="narrow">

@@ -3,22 +3,22 @@ import { ServicePage, type ServiceContent } from "@/components/site/ServicePage"
 import { assets } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: "Nursing-Home Physician Visits — Capital Region, NY",
+  title: "Nursing-Home Physician Visits",
   description:
     "On-site and telehealth physician visits at skilled nursing facilities across Benin City and surrounding communities, with Dr. Nosa Lebarty, MD.",
   alternates: { canonical: "/services/nursing-home-visits" },
 };
 
 const content: ServiceContent = {
-  eyebrow: "Nursing-home visits · Capital Region",
+  eyebrow: "Nursing-home visits · Benin City",
   title: "Bringing the doctor to the patient.",
   intro:
-    "Dr. Lebarty rounds at skilled nursing facilities across the Capital Region, combining on-site visits with telehealth assessments so older adults receive consistent, attentive care wherever they live. For families, it means a trusted physician at the bedside without the strain of transport.",
+    "Our physicians round at skilled nursing facilities across Benin City and surrounding communities, combining on-site visits with telehealth assessments so older adults receive consistent, attentive care wherever they live. For families, it means a trusted physician at the bedside without the strain of transport.",
   heroImage: assets.pages.nursingHome,
   overviewTitle: "Attentive care for our oldest neighbors.",
   overview: [
-    "Moving an older adult to and from a clinic can be exhausting — for the patient and for the family. Nursing-home visits remove that burden by bringing the physician to the facility instead. Dr. Nosa Lebarty, MD rounds at participating skilled nursing facilities across Benin City and surrounding communities, seeing patients where they already feel settled.",
-    "Older patients often live with several conditions at once, and their care needs steady, coordinated attention. Dr. Lebarty works closely with facility nursing staff and with families to keep medications, treatment plans, and goals of care aligned — so nothing falls through the cracks between visits.",
+    "Moving an older adult to and from a clinic can be exhausting, for the patient and for the family. Nursing-home visits remove that burden by bringing the physician to the facility instead. Dr. Nosa Lebarty, MD rounds at participating skilled nursing facilities across Benin City and surrounding communities, seeing patients where they already feel settled.",
+    "Older patients often live with several conditions at once, and their care needs steady, coordinated attention. Dr. Lebarty works closely with facility nursing staff and with families to keep medications, treatment plans, and goals of care aligned, so nothing falls through the cracks between visits.",
     "When a concern is routine, a telehealth assessment can answer it quickly without waiting for the next on-site round. When a patient needs to be seen in person, Dr. Lebarty is there. The aim is simple: consistent, unhurried care for the people who need it most.",
   ],
   featureImage: assets.services["nursing-home-visits"],
@@ -29,7 +29,7 @@ const content: ServiceContent = {
     "Close care coordination with facility nursing staff and family",
     "Management of complex, multi-condition patients",
     "Medication review and goals-of-care conversations",
-    "Medicare and most major insurance accepted",
+    "Costs confirmed with families up front",
   ],
   steps: [
     {
@@ -63,8 +63,8 @@ const content: ServiceContent = {
       a: "Dr. Lebarty coordinates closely with facility nursing staff and shares findings, medication changes, and care plans with families so everyone stays on the same page.",
     },
     {
-      q: "Is this care covered by Medicare?",
-      a: "Yes. Nursing-home physician visits are covered by Medicare and most major insurance plans. The office can help confirm coverage.",
+      q: "How are visits paid for?",
+      a: "The front desk confirms costs and payment options with the family or facility before visits begin, so there are no surprises.",
     },
   ],
   related: [

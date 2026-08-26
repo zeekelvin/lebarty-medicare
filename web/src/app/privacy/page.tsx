@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <p>
             This privacy policy explains how Lebarty Medicare Hospital handles
             information collected through this website. It does not cover
-            protected health information held in your medical record — that
+            protected health information held in your medical record. That
             information is governed by our{" "}
             <a href="/hipaa-notice">HIPAA Notice of Privacy Practices</a>.
           </p>
@@ -44,8 +44,8 @@ export default function PrivacyPage() {
             </li>
             <li>
               <strong>Information collected automatically.</strong> Like most
-              websites, we collect standard technical and usage data — such as
-              your browser type, device, and the pages you visit — to keep the
+              websites, we collect standard technical and usage data, such as
+              your browser type, device, and the pages you visit, to keep the
               site secure and understand how it is used.
             </li>
           </ul>
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
           <p>
             <strong>We do not sell your personal information.</strong> We share
             it only with service providers who help us operate the website and
-            communicate with you — and only as needed to do that work — or when
+            communicate with you, and only as needed to do that work, or when
             required by law. Any such providers are expected to protect your
             information and use it only for the services they provide to us.
           </p>

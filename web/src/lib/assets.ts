@@ -35,13 +35,13 @@ export const assets = {
     telehealth: `${CDN}/hf_20260523_080729_96f0d7c8-0b30-4062-99f3-b1adb138f93c.png`,
     nursingHome: `${CDN}/hf_20260523_080732_b930cea6-9da4-4521-b52f-342510b9de71.png`,
     preventiveCare: `${CDN}/hf_20260523_080735_4931daed-48fc-42e2-b2d9-1e8e013a76d0.png`,
-    civilSurgeon: `${CDN}/hf_20260523_080738_09dd73e0-9743-4019-953c-c75b638a949f.png`,
     patients: `${CDN}/hf_20260523_080741_30a1d5d4-46f3-433a-8a04-cd1e35e6d861.png`,
     locationExterior: `${CDN}/hf_20260523_080745_facc7bd5-f010-4033-85ee-ff4d90bbe314.png`,
     locationInterior: `${CDN}/hf_20260523_080748_df34860c-d286-4d33-b855-aaf92ff990a0.png`,
+    // Stand-in for the laboratory until real lab photography arrives. (Hospital Confirmation)
+    laboratory: `${CDN}/hf_20260523_080748_df34860c-d286-4d33-b855-aaf92ff990a0.png`,
     contact: `${CDN}/hf_20260523_080751_f83a44a9-3ad6-4c4e-9150-fe13f380802b.png`,
     resources: `${CDN}/hf_20260523_080754_53b0f3f9-e72c-429d-bea0-810983c00d7a.png`,
-    aboutTeaching: `${CDN}/hf_20260523_080757_b9982db3-c778-44c5-ae4b-402a9c8ed179.png`,
   } as Record<string, string>,
 
   drLebarty: "/DrNosa.png", // local — real CEO photo
@@ -54,7 +54,8 @@ export const assets = {
     "nursing-home-visits": `${CDN}/hf_20260521_175702_42829b66-a554-4a0e-99a7-492a149db974.png`,
     "addiction-medicine": `${CDN}/hf_20260521_180110_1407bf2f-a849-41f1-8901-723a911afeff.png`,
     "preventive-care": `${CDN}/hf_20260521_180116_6b2d6807-5c54-418f-b36a-68d3ac9cd57b.png`,
-    "civil-surgeon-uscis-exams": `${CDN}/hf_20260521_180328_b1dea8ef-467b-4895-a5b7-4aa5859f5d24.png`,
+    // Stand-in until real lab photography arrives. (Hospital Confirmation)
+    "laboratory": `${CDN}/hf_20260523_080748_df34860c-d286-4d33-b855-aaf92ff990a0.png`,
   } as Record<string, string>,
 
   // Existing Higgsfield motion loops (no new credits spent).
@@ -64,6 +65,5 @@ export const assets = {
     "nursing-home-visits": `${CDN}/hf_20260517_175103_303a5787-a6f9-4edb-b650-6a3aa84b4294.mp4`,
     "preventive-care": `${CDN}/hf_20260517_175116_81c43985-a642-45b3-bac2-333a9ebddaf0.mp4`,
     "telehealth": `${CDN}/hf_20260522_070917_452d9f53-68e7-4135-bd79-8680489b9424.mp4`,
-    "civil-surgeon-uscis-exams": `${CDN}/hf_20260522_070921_f941415b-c75f-4d1d-b5c9-2fdd48cabdb7.mp4`,
   } as Record<string, string>,
 } as const;

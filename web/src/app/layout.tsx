@@ -5,9 +5,10 @@ import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { PageBackground } from "@/components/ui/PageBackground";
 import { MobileNav } from "@/components/ui/MobileNav";
+import { ChatbotLazy } from "@/components/ui/ChatbotLazy";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { site } from "@/lib/site";
+import { navMore, navPrimary, site } from "@/lib/site";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -108,14 +109,12 @@ const jsonLd = {
   ],
 };
 
-const mobileLinks = [
-  { href: "/services", label: "Services", n: "01" },
-  { href: "/about/dr-lebarty", label: "About us", n: "02" },
-  { href: "/patients", label: "Patients", n: "03" },
-  { href: "/foundation", label: "Foundation", n: "04" },
-  { href: "/resources", label: "Resources", n: "05" },
-  { href: "/contact", label: "Contact", n: "06" },
-];
+// Derived from the nav data so desktop and mobile menus can never drift.
+// The fullscreen mobile menu shows everything flat, dropdown included.
+const mobileLinks = [...navPrimary, ...navMore].map((item, i) => ({
+  ...item,
+  n: String(i + 1).padStart(2, "0"),
+}));
 
 export default function RootLayout({
   children,
@@ -144,6 +143,7 @@ export default function RootLayout({
         </main>
 
         <Footer />
+        <ChatbotLazy />
 
         <script
           type="application/ld+json"

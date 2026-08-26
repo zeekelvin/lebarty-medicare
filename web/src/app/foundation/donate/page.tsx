@@ -34,7 +34,7 @@ export default function DonatePage() {
             <span className="block italic text-brand">further.</span>
           </>
         }
-        intro="Your donation funds the Lebarty Community Health Foundation's clinics, outreach teams, and training programs across Africa. One-time or recurring, designated or general — every dollar goes to the work."
+        intro="Your donation funds the Lebarty Community Health Foundation's clinics, outreach teams, and training programs across Africa. One-time or recurring, designated or general, every dollar goes to the work."
       >
         <ButtonLink href="/foundation" variant="secondary" size="lg">
           See our programs

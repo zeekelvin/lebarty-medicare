@@ -12,14 +12,14 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Book a visit",
   description:
-    "Schedule a visit with Dr. Nosa Lebarty — primary care, addiction medicine, telehealth, and USCIS exams in Benin City, Edo State. Same-week appointments for new patients.",
+    "Schedule a visit at Lebarty Medicare Hospital: primary care, addiction medicine, telehealth, and laboratory services in Benin City, Edo State. Same-week appointments for new patients.",
 };
 
 const bookingWays = [
   {
     eyebrow: "The fastest way",
     title: "Call us",
-    body: `Reach the front desk at ${site.contact.phoneDisplay}, Monday through Friday, 8 AM to 6 PM WAT. A real person will find you a time — most new patients are seen within a week.`,
+    body: `Reach the front desk at ${site.contact.phoneDisplay}, Monday through Friday, 8 AM to 6 PM WAT. A real person will find you a time, and most new patients are seen within a week.`,
   },
   {
     eyebrow: "From anywhere",
@@ -29,12 +29,12 @@ const bookingWays = [
   {
     eyebrow: "In our office",
     title: "Come in person",
-    body: `Visit us at ${site.location.street}, ${site.location.city}. In-person visits are ideal for physicals, labs, vaccinations, and USCIS civil surgeon exams.`,
+    body: `Visit us at ${site.location.street}, ${site.location.city}. In-person visits are ideal for physicals, lab tests, vaccinations, and check-up packages.`,
   },
 ];
 
 const firstVisitItems = [
-  "A photo ID and your insurance card",
+  "A photo ID and any HMO or insurance details",
   "A list of current medications, including doses",
   "Names and contact details for any other doctors you see",
   "Recent lab results or records, if you have them",
@@ -75,7 +75,7 @@ export default function BookPage() {
           <SectionHeading
             eyebrow="Your first appointment"
             title="What to bring with you."
-            intro="A little preparation helps us make the most of your visit. If you cannot find something on this list, come anyway — we will sort it out together."
+            intro="A little preparation helps us make the most of your visit. If you cannot find something on this list, come anyway and we will sort it out together."
           />
           <Reveal delay={0.1}>
             <ul className="space-y-4">

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about/dr-lebarty',
     '/services',
+    '/care-packages',
     '/book',
     '/patients',
     '/patients/insurance',

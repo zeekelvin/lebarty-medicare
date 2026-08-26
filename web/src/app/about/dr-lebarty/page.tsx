@@ -8,19 +8,19 @@ import { CardGrid } from "@/components/site/CardGrid";
 import { Reveal } from "@/components/site/Reveal";
 import { CTABand } from "@/components/site/CTABand";
 import { assets } from "@/lib/assets";
-import { site } from "@/lib/site";
+import { site, team } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dr. Nosa Lebarty — physician, civil surgeon, founder",
+  title: "About Lebarty Medicare Hospital",
   description:
-    "Dr. Nosa Lebarty is the founding physician of Lebarty Medicare Hospital and the Lebarty Community Health Foundation — board-certified in family medicine, a USCIS-designated civil surgeon, and faculty at Albany Medical College.",
+    "Lebarty Medicare Hospital in Benin City, Edo State: modern medicine, one team, one chart. Founded by Dr. Nosa Lebarty, board-certified in family medicine, alongside the Lebarty Community Health Foundation.",
 };
 
 const specialties = [
   {
     eyebrow: "Whole-person care",
     title: "Family Medicine",
-    body: "Care for every age and stage — physicals, chronic-condition management, and the long relationship that makes both possible.",
+    body: "Care for every age and stage: physicals, chronic-condition management, and the long relationship that makes both possible.",
   },
   {
     eyebrow: "Healing without judgment",
@@ -40,27 +40,18 @@ const specialties = [
   {
     eyebrow: "For our oldest neighbors",
     title: "Geriatric & Nursing-Home Care",
-    body: "On-site and telehealth rounds at skilled nursing facilities across the Capital Region — bringing the doctor to the patient.",
-  },
-  {
-    eyebrow: "Designated by USCIS",
-    title: "Civil Surgeon Exams",
-    body: "I-693 immigration medical examinations for adjustment-of-status applicants, completed correctly the first time.",
+    body: "On-site and telehealth rounds at skilled nursing facilities across Benin City and surrounding communities, bringing the doctor to the patient.",
   },
 ];
 
 const training = [
   {
     title: "Residency, Family Medicine",
-    detail: "Ellis Hospital, Schenectady, NY — where Dr. Lebarty trained and chose to stay and serve.",
+    detail: "Ellis Hospital, Schenectady, NY, where Dr. Lebarty trained and chose to stay and serve.",
   },
   {
     title: "Board Certification",
     detail: "Certified by the American Board of Family Medicine.",
-  },
-  {
-    title: "Civil Surgeon Designation",
-    detail: "Designated by U.S. Citizenship and Immigration Services to perform immigration medical exams.",
   },
 ];
 
@@ -68,24 +59,24 @@ export default function DrLebartyPage() {
   return (
     <>
       <PageHero
-        image={assets.pages.aboutTeaching}
-        imageAlt="Dr. Nosa Lebarty teaching medical students at Albany Medical College"
-        eyebrow="Meet your physician"
+        image="/hero/slide-3.jpg"
+        imageAlt="The Lebarty Medicare Hospital building in Benin City"
+        eyebrow="About Lebarty Medicare Hospital"
         title={
           <>
-            {site.founder.name}
+            {site.location.name}
             <span className="mt-2 block font-display text-[0.6em] italic text-brand">
-              Physician, civil surgeon, founder.
+              Your Health, Our Mission.
             </span>
           </>
         }
-        intro="Board-certified in family medicine, a USCIS-designated civil surgeon, medical director for two arms of Albany County government, and faculty at Albany Medical College — Dr. Lebarty built Lebarty Medicare Hospital in Benin City and the Lebarty Community Health Foundation to bring unhurried, competent care to everyone he can reach."
+        intro="A hospital in Benin City, Edo State, built on a simple conviction: excellent care should never feel out of reach. Modern medicine and an attentive team, working from one chart toward one plan, with every visit helping fund the Lebarty Community Health Foundation's clinics across Africa."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit
         </ButtonLink>
-        <ButtonLink href="/services/telehealth" variant="secondary" size="lg">
-          Telehealth visit
+        <ButtonLink href="/services" variant="secondary" size="lg">
+          Our services
         </ButtonLink>
       </PageHero>
 
@@ -93,22 +84,21 @@ export default function DrLebartyPage() {
         <FeatureRow
           image={assets.drLebarty}
           imageAlt="Portrait of Dr. Nosa Lebarty"
-          eyebrow="The doctor behind the practice"
+          eyebrow="Founder & physician"
           title="A doctor who keeps showing up."
         >
           <p>
             Dr. Lebarty trained at Ellis Hospital in Schenectady and went on to
-            build a practice that refuses to specialize past the patient. He
-            sees primary-care patients in clinic, treats opioid use disorder
-            with Suboxone, rounds at skilled nursing facilities across the
-            Capital Region, performs USCIS civil surgeon exams, teaches medical
-            students at Albany Med, and serves as a medical director for two
-            arms of Albany County government.
+            build a career that refuses to specialize past the patient: seeing
+            primary-care patients in clinic, treating opioid use disorder with
+            Suboxone, rounding at skilled nursing facilities, teaching medical
+            students, and serving as a medical director in county government
+            before founding Lebarty Medicare Hospital in Benin City.
           </p>
           <p>
-            That breadth isn&rsquo;t a r&eacute;sum&eacute; — it&rsquo;s a
+            That breadth isn&rsquo;t a r&eacute;sum&eacute;. It&rsquo;s a
             perspective. The same hands sign a child&rsquo;s vaccination record,
-            examine a green-card applicant, counsel someone on day one of
+            counsel someone on day one of
             recovery, and help pull together a clinic in a rural village. The
             unifying belief is plain: every person, wherever they are, deserves
             a competent, unhurried doctor.
@@ -116,7 +106,7 @@ export default function DrLebartyPage() {
           <p>
             For his patients, that means a physician who knows their history,
             answers the phone, and treats every visit as part of one continuous
-            relationship — not a transaction measured in minutes.
+            relationship, not a transaction measured in minutes.
           </p>
         </FeatureRow>
       </Section>
@@ -125,10 +115,21 @@ export default function DrLebartyPage() {
         <SectionHeading
           eyebrow="Specialties"
           title="One physician, many kinds of care."
-          intro="The work spans the clinic, the nursing home, the immigration exam room, and the recovery visit — held together by continuity and respect for the person in front of him."
+          intro="The work spans the clinic, the nursing home, and the recovery visit, held together by continuity and respect for the person in front of him."
         />
         <div className="mt-12">
           <CardGrid items={specialties} columns={3} />
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          eyebrow="The team"
+          title="One team around every patient."
+          intro="Care at Lebarty Medicare Hospital is a team effort: doctors, nurses, laboratory scientists, and support staff working from one chart toward one plan."
+        />
+        <div className="mt-12">
+          <CardGrid items={[...team]} columns={2} />
         </div>
       </Section>
 
@@ -166,7 +167,7 @@ export default function DrLebartyPage() {
                 <p>
                   Treating substance use disorder is some of the most meaningful
                   work Dr. Lebarty does. Suboxone (buprenorphine) and
-                  medication-assisted treatment work — and they work even better
+                  medication-assisted treatment work, and they work even better
                   when the person prescribing them treats you like a person.
                 </p>
                 <p>
@@ -192,7 +193,7 @@ export default function DrLebartyPage() {
         <SectionHeading
           tone="dark"
           eyebrow="Credentials & appointments"
-          title="Recognized across the Capital Region."
+          title="Recognized, credentialed, committed."
           intro="Beyond the clinic, Dr. Lebarty holds appointments that extend his care into county health, correctional medicine, medical education, and global outreach."
         />
         <ul className="mt-12 grid gap-3 sm:grid-cols-2">

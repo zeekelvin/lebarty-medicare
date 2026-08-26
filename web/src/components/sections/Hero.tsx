@@ -204,7 +204,7 @@ export function Hero() {
               Your Health, Our Mission.
             </h1>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-fg/70 sm:text-base">
-              An independent physician practice in Benin City — primary care,
+              A hospital in Benin City: primary care,
               addiction medicine, and telehealth. Every visit helps fund
               community clinics across Africa.
             </p>
