@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Check, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Reveal } from "@/components/site/Reveal";
@@ -63,13 +64,15 @@ export function CarePackagesHighlight() {
                   const featured = pkg.featured;
 
                   return (
-                    <article
+                    <Link
                       key={pkg.slug}
+                      href={`/care-packages#${pkg.slug}`}
+                      aria-label={`${pkg.name} package — view full details`}
                       className={cn(
-                        "relative flex min-h-[420px] min-w-0 flex-col rounded-lg border p-5",
+                        "group relative flex min-h-[420px] min-w-0 flex-col rounded-lg border p-5 transition-all duration-300 hover:-translate-y-1",
                         featured
-                          ? "border-brand bg-white text-fg shadow-[0_18px_48px_-24px_rgba(242,24,114,0.65)]"
-                          : "border-white/12 bg-[#0f2a3e]/88 text-white",
+                          ? "border-brand bg-white text-fg shadow-[0_18px_48px_-24px_rgba(242,24,114,0.65)] hover:shadow-[0_24px_56px_-22px_rgba(242,24,114,0.8)]"
+                          : "border-white/12 bg-[#0f2a3e]/88 text-white hover:border-brand/60",
                       )}
                     >
                       <div className="flex items-start justify-between gap-3">
@@ -144,8 +147,23 @@ export function CarePackagesHighlight() {
                         >
                           {pkg.price}
                         </p>
+                        <span
+                          className={cn(
+                            "mt-3 inline-flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.24em] transition-colors",
+                            featured
+                              ? "text-accent"
+                              : "text-brand group-hover:text-white",
+                          )}
+                        >
+                          View details
+                          <ArrowRight
+                            size={13}
+                            strokeWidth={2}
+                            className="transition-transform group-hover:translate-x-0.5"
+                          />
+                        </span>
                       </div>
-                    </article>
+                    </Link>
                   );
                 })}
               </div>

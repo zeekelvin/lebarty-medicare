@@ -46,8 +46,9 @@ export default function CarePackagesPage() {
             return (
               <Reveal key={pkg.slug} delay={i * 0.08}>
                 <div
+                  id={pkg.slug}
                   className={cn(
-                    "flex h-full flex-col rounded-2xl border bg-bg p-8",
+                    "flex h-full flex-col rounded-2xl border bg-bg p-8 scroll-mt-28",
                     featured
                       ? "border-accent shadow-[0_18px_50px_-24px_rgba(12,123,121,0.45)]"
                       : "border-fg/10",
