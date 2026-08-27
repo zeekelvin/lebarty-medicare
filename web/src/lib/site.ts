@@ -11,7 +11,7 @@ export const site = {
   name: 'Lebarty Medicare',
   fullName: 'Lebarty Medicare Hospital & Lebarty Community Health Foundation',
   shortDescription:
-    'A hospital in Benin City, Edo State, offering primary care, addiction medicine, telehealth, and laboratory services while funding community clinics here and across Africa.',
+    'A hospital in Benin City, Edo State, offering general medicine, pediatrics, emergency care, laboratory services and more, while funding community clinics here and across Africa.',
   url: siteUrl,
   domain: new URL(siteUrl).host,
   ogImage: '/og-image.png',
@@ -59,48 +59,70 @@ export const site = {
   },
 } as const;
 
+/** Services mirror the hospital signage (LMW-24, Dr. Nosa). */
 export const services = [
   {
-    slug: 'primary-care',
-    title: 'Primary Care',
-    eyebrow: 'For your whole life',
+    slug: 'general-medicine',
+    title: 'General Medicine',
+    eyebrow: 'Everyday health, handled',
     description:
-      'Annual physicals, chronic-condition management, vaccinations, preventive screenings, all built around continuity, not minutes-per-visit.',
+      'Consultations, check-ups, and treatment for everyday illness, from malaria and infections to minor injuries, with referrals into every other service in the hospital.',
   },
   {
-    slug: 'addiction-medicine',
-    title: 'Addiction Medicine',
-    eyebrow: 'Healing without judgment',
+    slug: 'internal-medicine',
+    title: 'Internal Medicine',
+    eyebrow: 'Adult medicine, in depth',
     description:
-      'Suboxone (buprenorphine) and medication-assisted treatment for opioid use disorder. Person-first care, telehealth-friendly intake, same-week appointments.',
+      'In-depth care for adults: hypertension, diabetes, and other chronic or complex conditions, diagnosed carefully and managed over the long term.',
   },
   {
-    slug: 'telehealth',
-    title: 'Telehealth',
-    eyebrow: 'Care that travels with you',
+    slug: 'pediatrics',
+    title: 'Pediatrics',
+    eyebrow: 'For our youngest patients',
     description:
-      'Secure video visits from your home, work, or anywhere with a signal. Same physician, same chart, same continuity.',
+      'Gentle, thorough care for babies, children, and teens: check-ups, immunizations, childhood illness, and growth monitoring, with parents part of every step.',
   },
   {
-    slug: 'nursing-home-visits',
-    title: 'Nursing Home Visits',
-    eyebrow: 'For our oldest neighbors',
+    slug: 'emergency-services',
+    title: 'Emergency Services',
+    eyebrow: 'Always here when you need us',
     description:
-      'On-site and telehealth assessments at skilled nursing facilities across Benin City and surrounding communities. Bringing the doctor to the patient.',
+      'Urgent care for accidents and sudden illness. Come straight in or call the hospital line; the team stabilizes first and explains everything as soon as it is safe to.',
   },
   {
     slug: 'laboratory',
-    title: 'Laboratory',
+    title: 'Laboratory Services',
     eyebrow: 'Answers you can act on',
     description:
       'Blood work, urinalysis, and diagnostic testing on site: clear results, explained plainly, coordinated with your care plan. Call the front desk for current test availability.',
   },
   {
-    slug: 'preventive-care',
-    title: 'Preventive Care',
-    eyebrow: 'The visits that prevent the visits',
+    slug: 'eye-clinic',
+    title: 'Eye Clinic',
+    eyebrow: 'See clearly, live fully',
     description:
-      'Lab work, wellness visits, women\'s health, men\'s health, age-appropriate screenings, all coordinated with your primary care plan.',
+      'Eye examinations, vision testing, and glasses prescriptions, with treatment for common eye conditions and referrals for specialist surgery where needed.',
+  },
+  {
+    slug: 'pharmacy',
+    title: 'Pharmacy',
+    eyebrow: 'Medication, made simple',
+    description:
+      'The on-site hospital pharmacy fills prescriptions right after your visit, with counseling on how to take every medication safely and refills made easy.',
+  },
+  {
+    slug: 'diagnostic-imaging',
+    title: 'Diagnostic Imaging & X-ray',
+    eyebrow: 'A clear look inside',
+    description:
+      'X-ray and ultrasound imaging that supports diagnosis across the hospital, with results reviewed together with your clinician, not handed over as a puzzle.',
+  },
+  {
+    slug: 'ambulance',
+    title: 'Ambulance & Patient Transport',
+    eyebrow: 'We come to you',
+    description:
+      'Ambulance response and planned patient transport to and from the hospital. For emergencies call 112 or the hospital line; transfers are arranged through the front desk.',
   },
 ] as const;
 

@@ -175,7 +175,7 @@ export function Hero() {
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
           className="font-mono text-[10px] uppercase tracking-[0.42em] text-fg/70 sm:text-[11px]"
         >
-          Benin City, Edo State · Telehealth available
+          Benin City, Edo State · Your Health, Our Mission
         </motion.span>
         <motion.div
           aria-hidden
@@ -204,8 +204,8 @@ export function Hero() {
               Your Health, Our Mission.
             </h1>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-fg/70 sm:text-base">
-              A hospital in Benin City: primary care,
-              addiction medicine, and telehealth. Every visit helps fund
+              A hospital in Benin City: general medicine,
+              pediatrics, emergency care, and more. Every visit helps fund
               community clinics across Africa.
             </p>
           </div>

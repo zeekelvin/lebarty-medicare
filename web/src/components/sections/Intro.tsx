@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 
 const STATS = [
   { figure: "6+", label: "Board-certified specialists" },
-  { figure: "100%", label: "Telehealth availability" },
+  { figure: "9", label: "Core services under one roof" },
   { figure: "12+", label: "Communities reached in Africa" },
 ];
 

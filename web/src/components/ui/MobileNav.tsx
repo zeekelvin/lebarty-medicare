@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X } from "lucide-react";
+import { Logo } from "@/components/layout/Logo";
 
 const MotionLink = motion.create(Link);
 
@@ -57,6 +58,15 @@ export function MobileNav({
 
   return (
     <>
+      {/* The beating-heart logo is mobile's always-visible way home — it sits
+          above the menu overlay so it works even while the menu is open. */}
+      <div
+        onClick={() => setOpen(false)}
+        className="pointer-events-auto fixed left-5 top-4 z-[80] lg:hidden"
+      >
+        <Logo variant="mark" />
+      </div>
+
       <button
         type="button"
         aria-label={open ? "Close menu" : "Open menu"}

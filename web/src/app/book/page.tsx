@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Book a visit",
   description:
-    "Schedule a visit at Lebarty Medicare Hospital: primary care, addiction medicine, telehealth, and laboratory services in Benin City, Edo State. Same-week appointments for new patients.",
+    "Schedule a visit at Lebarty Medicare Hospital: general medicine, pediatrics, eye clinic, and laboratory services in Benin City, Edo State. Same-week appointments for new patients.",
 };
 
 const bookingWays = [

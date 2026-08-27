@@ -69,7 +69,7 @@ export default function PatientsPage() {
         imageAlt="A patient checking in at the welcoming front desk of Lebarty Medicare"
         eyebrow="Patients"
         title="Everything you need before your first visit."
-        intro="Whether you're new to the practice, returning after time away, or joining us on telehealth, we've gathered the practical details in one calm place, so the only thing you have to focus on is your health."
+        intro="Whether you're new to the hospital, returning after time away, or booking a telehealth visit from home, we've gathered the practical details in one calm place, so the only thing you have to focus on is your health."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit

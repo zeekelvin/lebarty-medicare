@@ -11,7 +11,7 @@ import { services, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Primary care, addiction medicine, telehealth, nursing-home visits, laboratory, and preventive care, all under one roof in Benin City, Edo State.",
+    "General medicine, internal medicine, pediatrics, emergency services, laboratory, eye clinic, pharmacy, imaging, and ambulance services, all under one roof in Benin City, Edo State.",
 };
 
 export default function ServicesIndexPage() {

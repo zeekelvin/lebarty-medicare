@@ -13,11 +13,11 @@ export default function HomePage() {
       <Hero />
       <Marquee
         items={[
-          "Family medicine",
-          "Addiction medicine",
-          "Telehealth available",
+          "General medicine",
+          "Pediatrics & child health",
+          "Emergency services",
           "Laboratory & diagnostics",
-          "Nursing-home visits",
+          "Eye clinic · Pharmacy · X-ray",
           "Care here · clinics in Africa",
         ]}
       />
@@ -27,8 +27,8 @@ export default function HomePage() {
         items={[
           "Same-week appointments",
           "Prepaid care packages",
-          "Board-certified family medicine",
-          "Judgment-free addiction care",
+          "Board-certified physicians",
+          "Ambulance & patient transport",
         ]}
         baseDuration={42}
       />

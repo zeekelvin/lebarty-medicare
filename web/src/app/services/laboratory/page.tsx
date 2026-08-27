@@ -21,7 +21,7 @@ const content: ServiceContent = {
     "Common tests include full blood count, blood sugar, kidney and liver panels, lipid profile, urinalysis, and screening tests for infections. Test availability changes as the laboratory grows, so call the front desk to confirm a specific test before your visit.",
     "Results are never just numbers on a slip. Your clinician walks you through what a result means, what it changes, and what happens next. Everything lands in the same chart your care team already works from.",
   ],
-  featureImage: assets.pages.servicesHero,
+  featureImage: assets.services["laboratory"],
   expectTitle: "What the laboratory covers.",
   expect: [
     "Blood work: full blood count, blood sugar, and organ panels",
@@ -74,14 +74,14 @@ const content: ServiceContent = {
       href: "/care-packages",
     },
     {
-      title: "Preventive Care",
-      body: "Annual wellness visits and screenings that put your lab results to work, year after year.",
-      href: "/services/preventive-care",
+      title: "General Medicine",
+      body: "Check-ups and everyday care from a physician who orders the right tests and follows up on every result.",
+      href: "/services/general-medicine",
     },
     {
-      title: "Primary Care",
-      body: "A continuous relationship with a physician who knows your history and tracks your results over time.",
-      href: "/services/primary-care",
+      title: "Internal Medicine",
+      body: "Specialist care for adult conditions like hypertension and diabetes, guided by lab results tracked over time.",
+      href: "/services/internal-medicine",
     },
   ],
 };

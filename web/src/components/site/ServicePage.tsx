@@ -140,7 +140,7 @@ export function ServicePage(c: ServiceContent) {
 
       <CTABand
         title="Ready to be seen?"
-        body="Same-week appointments for new patients, with telehealth available most weekday evenings."
+        body="Same-week appointments for new patients, and the front desk one call away."
       >
         <ButtonLink href="/book" size="lg">
           Book a visit

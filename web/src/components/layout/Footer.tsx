@@ -22,9 +22,9 @@ export function Footer() {
               Care
             </h3>
             <ul className="mt-4 space-y-3 text-sm">
-              <li><Link href="/services/primary-care" className="transition-colors hover:text-brand">Primary care</Link></li>
-              <li><Link href="/services/addiction-medicine" className="transition-colors hover:text-brand">Addiction medicine</Link></li>
-              <li><Link href="/services/telehealth" className="transition-colors hover:text-brand">Telehealth</Link></li>
+              <li><Link href="/services/general-medicine" className="transition-colors hover:text-brand">General medicine</Link></li>
+              <li><Link href="/services/pediatrics" className="transition-colors hover:text-brand">Pediatrics</Link></li>
+              <li><Link href="/services/emergency-services" className="transition-colors hover:text-brand">Emergency services</Link></li>
               <li><Link href="/services/laboratory" className="transition-colors hover:text-brand">Laboratory</Link></li>
               <li><Link href="/services" className="transition-colors hover:text-brand">All services</Link></li>
             </ul>

@@ -21,7 +21,7 @@ const billingNotes = [
   },
   {
     title: "Transparent rates",
-    body: "Paying directly? We offer clear, upfront pricing for visits, telehealth, lab tests, and care packages. Ask the front desk for current rates.",
+    body: "Paying directly? We offer clear, upfront pricing for consultations, lab tests, scans, and care packages. Ask the front desk for current rates.",
   },
   {
     title: "Statements and payment plans",

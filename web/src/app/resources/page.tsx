@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Resources & health education",
   description:
-    "Plain-language guides on preparing for a visit, Suboxone treatment, telehealth, lab tests, payment options, and more.",
+    "Plain-language guides on preparing for a visit, understanding your prescriptions, check-ups, lab tests, payment options, and more.",
 };
 
 const resources = [
@@ -22,16 +22,16 @@ const resources = [
     href: "/patients",
   },
   {
-    eyebrow: "Addiction medicine",
-    title: "Understanding Suboxone treatment",
-    body: "How buprenorphine works for opioid use disorder, what the first weeks look like, and why person-first care matters.",
-    href: "/services/addiction-medicine",
+    eyebrow: "Pharmacy",
+    title: "Understanding your prescriptions",
+    body: "How to read your prescription, take your medicines safely, and what to ask the pharmacist before you head home.",
+    href: "/services/pharmacy",
   },
   {
-    eyebrow: "Telehealth",
+    eyebrow: "Booking",
     title: "Tips for a smooth telehealth visit",
-    body: "Simple ways to prepare: checking your connection, finding a quiet space, and having your medication list nearby.",
-    href: "/services/telehealth",
+    body: "Requested a telehealth visit? Simple ways to prepare: checking your connection, finding a quiet space, and having your medication list nearby.",
+    href: "/book",
   },
   {
     eyebrow: "Laboratory",
@@ -46,10 +46,10 @@ const resources = [
     href: "/patients/insurance",
   },
   {
-    eyebrow: "Preventive care",
-    title: "Why annual physicals matter",
-    body: "What a yearly check-up covers, the screenings tied to your age, and how prevention keeps small issues small.",
-    href: "/services/preventive-care",
+    eyebrow: "Check-ups",
+    title: "Why regular check-ups matter",
+    body: "What a check-up covers, the screenings that fit your age, and how catching small issues early keeps them small.",
+    href: "/services/general-medicine",
   },
 ];
 

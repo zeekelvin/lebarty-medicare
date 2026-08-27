@@ -177,12 +177,12 @@ export default function DrLebartyPage() {
                 </p>
               </div>
               <ButtonLink
-                href="/services/addiction-medicine"
+                href="/contact"
                 variant="accent"
                 size="md"
                 className="mt-7"
               >
-                Explore addiction medicine
+                Reach out privately
               </ButtonLink>
             </div>
           </Reveal>
@@ -228,8 +228,8 @@ export default function DrLebartyPage() {
         <ButtonLink href="/book" size="lg">
           Book with Dr. Lebarty
         </ButtonLink>
-        <ButtonLink href="/services/telehealth" variant="secondary" size="lg">
-          Telehealth visit
+        <ButtonLink href="/book" variant="secondary" size="lg">
+          Request a telehealth visit
         </ButtonLink>
       </CTABand>
     </>
