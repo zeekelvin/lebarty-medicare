@@ -8,7 +8,8 @@ import { MobileNav } from "@/components/ui/MobileNav";
 import { ChatbotLazy } from "@/components/ui/ChatbotLazy";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { navMore, navPrimary, site } from "@/lib/site";
+import { navMore, navPrimary, services, site } from "@/lib/site";
+import type { MobileNavLink } from "@/components/ui/MobileNav";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -119,12 +120,23 @@ const jsonLd = {
 };
 
 // Derived from the nav data so desktop and mobile menus can never drift.
-// The fullscreen mobile menu shows everything flat, dropdown included.
+// The fullscreen mobile menu shows everything flat, dropdown included;
+// Services carries the per-service list as an expandable sub-menu.
 // (Home on mobile is the beating-heart logo MobileNav pins top-left.)
-const mobileLinks = [...navPrimary, ...navMore].map((item, i) => ({
-  ...item,
-  n: String(i + 1).padStart(2, "0"),
-}));
+const mobileLinks: MobileNavLink[] = [...navPrimary, ...navMore].map(
+  (item, i) => ({
+    label: item.label,
+    href: item.href,
+    n: String(i + 1).padStart(2, "0"),
+    children:
+      item.href === "/services"
+        ? services.map((s) => ({
+            label: s.title,
+            href: `/services/${s.slug}`,
+          }))
+        : undefined,
+  }),
+);
 
 export default function RootLayout({
   children,

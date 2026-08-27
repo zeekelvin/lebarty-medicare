@@ -3,12 +3,19 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Logo } from "@/components/layout/Logo";
+import { cn } from "@/lib/cn";
 
 const MotionLink = motion.create(Link);
 
-export type MobileNavLink = { href: string; label: string; n: string };
+export type MobileNavLink = {
+  href: string;
+  label: string;
+  n: string;
+  /** Optional sub-links rendered as an expandable list under the row. */
+  children?: ReadonlyArray<{ href: string; label: string }>;
+};
 
 /**
  * Hamburger top-right → fullscreen overlay nav.
@@ -31,6 +38,11 @@ export function MobileNav({
   footer?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!open) setExpanded(null);
+  }, [open]);
 
   useEffect(() => {
     const onNav = () => setOpen(false);
@@ -147,30 +159,110 @@ export function MobileNav({
               </div>
 
               <nav className="flex flex-col gap-1">
-                {links.map((link, i) => (
-                  <MotionLink
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
-                    transition={{
-                      duration: 0.7,
-                      delay: 0.45 + i * 0.08,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="group flex items-baseline gap-4 border-b border-fg/10 py-4 transition-colors hover:text-accent"
-                  >
-                    <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-fg/40 group-hover:text-accent">
-                      {link.n}
-                    </span>
-                    <span className="font-display text-4xl uppercase leading-[0.9] tracking-tight sm:text-5xl">
-                      {link.label}
-                    </span>
-                    <span className="ml-auto h-2 w-2 self-center rounded-full bg-fg/20 transition-colors group-hover:bg-brand" />
-                  </MotionLink>
-                ))}
+                {links.map((link, i) =>
+                  link.children?.length ? (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 20 }}
+                      transition={{
+                        duration: 0.7,
+                        delay: 0.45 + i * 0.08,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="border-b border-fg/10"
+                    >
+                      <div className="group flex items-baseline gap-4 py-4">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-fg/40 group-hover:text-accent">
+                          {link.n}
+                        </span>
+                        <Link
+                          href={link.href}
+                          onClick={() => setOpen(false)}
+                          className="font-display text-4xl uppercase leading-[0.9] tracking-tight transition-colors hover:text-accent sm:text-5xl"
+                        >
+                          {link.label}
+                        </Link>
+                        <button
+                          type="button"
+                          aria-expanded={expanded === link.href}
+                          aria-label={
+                            expanded === link.href
+                              ? `Hide ${link.label} list`
+                              : `Show ${link.label} list`
+                          }
+                          onClick={() =>
+                            setExpanded((value) =>
+                              value === link.href ? null : link.href,
+                            )
+                          }
+                          className="ml-auto flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-full border border-fg/15 text-fg/60 transition-colors hover:border-accent hover:text-accent"
+                        >
+                          <ChevronDown
+                            size={18}
+                            strokeWidth={1.8}
+                            className={cn(
+                              "transition-transform duration-300",
+                              expanded === link.href && "rotate-180",
+                            )}
+                          />
+                        </button>
+                      </div>
+
+                      <AnimatePresence initial={false}>
+                        {expanded === link.href && (
+                          <motion.ul
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{
+                              duration: 0.4,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                            className="overflow-hidden"
+                          >
+                            {link.children.map((child) => (
+                              <li key={child.href}>
+                                <Link
+                                  href={child.href}
+                                  onClick={() => setOpen(false)}
+                                  className="block py-2.5 pl-10 font-mono text-xs uppercase tracking-[0.22em] text-fg/65 transition-colors hover:text-accent"
+                                >
+                                  {child.label}
+                                </Link>
+                              </li>
+                            ))}
+                            <li aria-hidden className="h-3" />
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
+                  ) : (
+                    <MotionLink
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 20 }}
+                      transition={{
+                        duration: 0.7,
+                        delay: 0.45 + i * 0.08,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="group flex items-baseline gap-4 border-b border-fg/10 py-4 transition-colors hover:text-accent"
+                    >
+                      <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-fg/40 group-hover:text-accent">
+                        {link.n}
+                      </span>
+                      <span className="font-display text-4xl uppercase leading-[0.9] tracking-tight sm:text-5xl">
+                        {link.label}
+                      </span>
+                      <span className="ml-auto h-2 w-2 self-center rounded-full bg-fg/20 transition-colors group-hover:bg-brand" />
+                    </MotionLink>
+                  ),
+                )}
               </nav>
 
               <motion.div
