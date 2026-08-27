@@ -26,52 +26,76 @@ type Service = {
 
 const SERVICES: Service[] = [
   {
-    slug: "primary-care",
-    category: "For your whole life",
-    title: "Primary Care",
-    tagline: "Annual physicals, chronic care, screenings, all with continuity.",
-    span: "wide",
-    bullets: ["Annual physicals & wellness", "Chronic condition management", "Same-week new patients"],
-  },
-  {
-    slug: "telehealth",
-    category: "Care that travels",
-    title: "Telehealth",
-    tagline: "Secure video visits, wherever you are.",
-    span: "square",
-    bullets: ["HIPAA-secure video", "Evening slots", "Same physician, same chart"],
-  },
-  {
-    slug: "addiction-medicine",
-    category: "Healing without judgment",
-    title: "Addiction Medicine",
-    tagline: "Suboxone & medication-assisted treatment. No stigma, ever.",
+    slug: "emergency-services",
+    category: "Always here",
+    title: "Emergency Services",
+    tagline: "Urgent care for accidents and sudden illness. Call 112 or come straight in.",
     span: "feature",
-    bullets: ["Suboxone / buprenorphine", "Telehealth induction available", "Same-week appointments"],
+    bullets: ["No appointment needed", "Rapid triage, care first", "Families kept informed"],
   },
   {
-    slug: "nursing-home-visits",
-    category: "For our oldest neighbors",
-    title: "Nursing Home Visits",
-    tagline: "On-site and telehealth assessments across Benin City.",
+    slug: "general-medicine",
+    category: "Everyday health",
+    title: "General Medicine",
+    tagline: "Consultations, check-ups, and treatment for everyday illness.",
+    span: "wide",
+    bullets: ["Same-week consultations", "Malaria & common illness", "Referrals across the hospital"],
+  },
+  {
+    slug: "pediatrics",
+    category: "For our youngest",
+    title: "Pediatrics",
+    tagline: "Gentle care for babies, children, and teens.",
     span: "square",
-    bullets: ["On-site physician rounds", "Telehealth follow-ups", "Family coordination"],
+    bullets: ["Immunizations", "Childhood illness", "Growth monitoring"],
   },
   {
     slug: "laboratory",
     category: "Diagnostics",
-    title: "Laboratory",
+    title: "Laboratory Services",
     tagline: "Lab tests and results, handled under one roof.",
-    span: "square",
+    span: "wide",
     bullets: ["Blood work & urinalysis", "Screening support", "Results explained clearly"],
   },
   {
-    slug: "preventive-care",
-    category: "Stay ahead of it",
-    title: "Preventive Care",
-    tagline: "Screenings, labs, and wellness calibrated to your life.",
-    span: "wide",
-    bullets: ["Age-appropriate screenings", "In-house & partner labs", "Women's & men's health"],
+    slug: "internal-medicine",
+    category: "Adult medicine",
+    title: "Internal Medicine",
+    tagline: "In-depth care for chronic and complex conditions.",
+    span: "square",
+    bullets: ["Hypertension & diabetes", "Careful diagnosis", "Long-term management"],
+  },
+  {
+    slug: "eye-clinic",
+    category: "Vision",
+    title: "Eye Clinic",
+    tagline: "Eye exams, vision testing, and glasses prescriptions.",
+    span: "square",
+    bullets: ["Comprehensive eye exams", "Glasses prescriptions", "Specialist referrals"],
+  },
+  {
+    slug: "pharmacy",
+    category: "On site",
+    title: "Pharmacy",
+    tagline: "Prescriptions filled right after your visit.",
+    span: "square",
+    bullets: ["Filled after your visit", "Medication counseling", "Easy refills"],
+  },
+  {
+    slug: "diagnostic-imaging",
+    category: "A look inside",
+    title: "Diagnostic Imaging & X-ray",
+    tagline: "X-ray and ultrasound, reviewed with your clinician.",
+    span: "square",
+    bullets: ["Digital X-ray", "Ultrasound scans", "Results reviewed together"],
+  },
+  {
+    slug: "ambulance",
+    category: "We come to you",
+    title: "Ambulance & Patient Transport",
+    tagline: "Emergency response and planned transfers, arranged through the front desk.",
+    span: "feature",
+    bullets: ["Emergency response", "Planned transfers", "Call the hospital line"],
   },
 ];
 
@@ -98,7 +122,7 @@ export function ServicesShowcase() {
           <div>
             <span className="inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.42em] text-accent">
               <span className="h-px w-12 bg-accent" />
-              The Services · 06 ways we care
+              The Services · 09 ways we care
             </span>
             <h2 className="mt-4 font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] text-fg">
               <span className="block">One team.</span>

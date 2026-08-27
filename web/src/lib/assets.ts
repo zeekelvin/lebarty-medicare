@@ -29,18 +29,12 @@ export const assets = {
 
   // Interior-page photography.
   pages: {
-    servicesHero: `${CDN}/hf_20260523_080719_76ffddf7-6bdf-4faf-a176-528cf084e4c7.png`,
-    primaryCare: `${CDN}/hf_20260523_080722_29252355-4dac-4eab-9d74-88a95f2ad018.png`,
-    addictionMedicine: `${CDN}/hf_20260523_080725_f8178345-3efb-4840-a79e-ae9313d27474.png`,
-    telehealth: `${CDN}/hf_20260523_080729_96f0d7c8-0b30-4062-99f3-b1adb138f93c.png`,
-    nursingHome: `${CDN}/hf_20260523_080732_b930cea6-9da4-4521-b52f-342510b9de71.png`,
+    servicesHero: `${CDN}/hf_20260827_085630_cadb51d2-4237-467e-bdd2-b68dba2e851c.png`,
     preventiveCare: `${CDN}/hf_20260523_080735_4931daed-48fc-42e2-b2d9-1e8e013a76d0.png`,
-    patients: `${CDN}/hf_20260523_080741_30a1d5d4-46f3-433a-8a04-cd1e35e6d861.png`,
-    locationExterior: `${CDN}/hf_20260523_080745_facc7bd5-f010-4033-85ee-ff4d90bbe314.png`,
+    patients: `${CDN}/hf_20260827_085630_2eb39c3f-f4ba-4834-9025-a1e10fece1a4.png`,
     locationInterior: `${CDN}/hf_20260523_080748_df34860c-d286-4d33-b855-aaf92ff990a0.png`,
-    // Stand-in for the laboratory until real lab photography arrives. (Hospital Confirmation)
-    laboratory: `${CDN}/hf_20260523_080748_df34860c-d286-4d33-b855-aaf92ff990a0.png`,
-    contact: `${CDN}/hf_20260523_080751_f83a44a9-3ad6-4c4e-9150-fe13f380802b.png`,
+    laboratory: `${CDN}/hf_20260827_085630_7ad799b9-0228-4cde-9ea7-6739edf23cc3.png`,
+    contact: `${CDN}/hf_20260827_085630_70e9f65d-9f45-4f78-bab2-6792e2070e74.png`,
     resources: `${CDN}/hf_20260523_080754_53b0f3f9-e72c-429d-bea0-810983c00d7a.png`,
   } as Record<string, string>,
 
@@ -48,22 +42,29 @@ export const assets = {
 
   logo3d: `${CDN}/hf_20260522_093629_766d5955-a010-4268-9671-ce6b793f453a.png`, // Higgsfield 3D logo render
 
+  // Signage services (LMW-24) — Nigerian casts, generated Aug 2026.
   services: {
-    "primary-care": `${CDN}/hf_20260521_175652_2eca35bb-faae-47b1-95cd-851c07f88f48.png`,
-    "telehealth": `${CDN}/hf_20260521_175658_1844bcf3-e876-4437-9192-6b2d2775c077.png`,
-    "nursing-home-visits": `${CDN}/hf_20260521_175702_42829b66-a554-4a0e-99a7-492a149db974.png`,
-    "addiction-medicine": `${CDN}/hf_20260521_180110_1407bf2f-a849-41f1-8901-723a911afeff.png`,
-    "preventive-care": `${CDN}/hf_20260521_180116_6b2d6807-5c54-418f-b36a-68d3ac9cd57b.png`,
-    // Stand-in until real lab photography arrives. (Hospital Confirmation)
-    "laboratory": `${CDN}/hf_20260523_080748_df34860c-d286-4d33-b855-aaf92ff990a0.png`,
+    "general-medicine": `${CDN}/hf_20260827_101339_0f6393b1-74ca-4b59-9214-26579df269e8.png`,
+    "internal-medicine": `${CDN}/hf_20260827_101339_29cf9c5c-8f98-45f7-9c79-02ecf839f366.png`,
+    "pediatrics": `${CDN}/hf_20260827_101339_3d0181f5-198e-4d38-915b-d437384fa5b3.png`,
+    "emergency-services": `${CDN}/hf_20260827_101339_41bea06e-c4b5-4ee2-8b54-df2667da4f80.png`,
+    "laboratory": `${CDN}/hf_20260827_085630_e16c977c-d247-4e9c-bbcd-de488f6bc522.png`,
+    "eye-clinic": `${CDN}/hf_20260827_101339_4a526c3b-4b4f-450c-a4b0-9a826a006d77.png`,
+    "pharmacy": `${CDN}/hf_20260827_101339_44f07f34-4bdb-4509-80ff-bd5765d14a3c.png`,
+    "diagnostic-imaging": `${CDN}/hf_20260827_101339_52a45d6c-fd4d-4763-9618-bf51ee6d287f.png`,
+    "ambulance": `${CDN}/hf_20260827_101339_1a8668ee-ea70-404c-80fe-099143ae375e.png`,
   } as Record<string, string>,
 
-  // Existing Higgsfield motion loops (no new credits spent).
+  // Higgsfield motion loops for the service tiles (Seedance, Aug 2026).
   serviceVideos: {
-    "addiction-medicine": `${CDN}/hf_20260517_175110_edd8f5ff-5033-43d1-926a-218cefd8712d.mp4`,
-    "primary-care": `${CDN}/hf_20260517_175106_dac5e1b1-4011-45a5-85ef-c94a680587cc.mp4`,
-    "nursing-home-visits": `${CDN}/hf_20260517_175103_303a5787-a6f9-4edb-b650-6a3aa84b4294.mp4`,
-    "preventive-care": `${CDN}/hf_20260517_175116_81c43985-a642-45b3-bac2-333a9ebddaf0.mp4`,
-    "telehealth": `${CDN}/hf_20260522_070917_452d9f53-68e7-4135-bd79-8680489b9424.mp4`,
+    "general-medicine": `${CDN}/hf_20260827_102530_69f8393e-ef57-46d4-bc14-282c95407351.mp4`,
+    "internal-medicine": `${CDN}/hf_20260827_102529_4b5bb774-9dfc-4e6b-beb8-4d880902ae64.mp4`,
+    "pediatrics": `${CDN}/hf_20260827_102529_e462a75a-6540-4cf5-87b9-92c1fe218155.mp4`,
+    "emergency-services": `${CDN}/hf_20260827_102529_9218bd46-0aa5-4374-b0b7-4321b5a07c29.mp4`,
+    "laboratory": `${CDN}/hf_20260827_092921_110e60a7-bd89-4d92-a77c-8ed6c846f0e6.mp4`,
+    "eye-clinic": `${CDN}/hf_20260827_102529_d98cabc2-1c5c-47e0-9193-bdc66711738e.mp4`,
+    "pharmacy": `${CDN}/hf_20260827_102659_556223ad-7035-4519-b95d-4d97af549560.mp4`,
+    "diagnostic-imaging": `${CDN}/hf_20260827_102529_a953717b-1337-4225-8bbb-95109560ad86.mp4`,
+    "ambulance": `${CDN}/hf_20260827_102700_169e8ce7-039c-4cc0-bbd9-18988dcb4fbb.mp4`,
   } as Record<string, string>,
 } as const;

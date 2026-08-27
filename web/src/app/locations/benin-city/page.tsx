@@ -28,8 +28,8 @@ export default function BeninCityLocationPage() {
   return (
     <>
       <PageHero
-        image={assets.pages.locationExterior}
-        imageAlt="The exterior of Lebarty Medicare Hospital in Benin City, Edo State"
+        image="/hero/slide-3.jpg"
+        imageAlt="The Lebarty Medicare Hospital building in Benin City, Edo State"
         eyebrow="Visit us"
         title="Our Benin City hospital."
         intro="Find us along Ugo Ben Road, by Festus Ajayi Junction, Irhirhi Road, in Aruogba Community, off Airport Road. Free on-site parking and a calm, welcoming entrance built for a low-key visit. Can't make it in today? Telehealth is available."
@@ -56,8 +56,8 @@ export default function BeninCityLocationPage() {
             we believe in: continuity over minutes-per-visit.
           </p>
           <p>
-            Whether you're here for an annual physical, ongoing primary care, a
-            lab test, or addiction medicine, you'll see the same
+            Whether you're here for a check-up, a lab test, an eye exam, or a
+            child's immunization, you'll see the same
             physician each time, working from the same chart. Telehealth visits
             connect to that same continuity from wherever you are.
           </p>

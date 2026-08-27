@@ -64,8 +64,9 @@ function tokenize(text: string): Set<string> {
  * Manual regression matrix — re-check after editing topics or keywords:
  *   "What services do you offer?"      -> Our services
  *   "Tell me about care packages"      -> Care packages
- *   "Do you offer Suboxone?"           -> Addiction Medicine
- *   "Do you prescribe buprenorphine?"  -> Addiction Medicine
+ *   "Do you treat children?"           -> Pediatrics
+ *   "Do you do x-rays?"                -> Diagnostic Imaging & X-ray
+ *   "Do you have a pharmacy?"          -> Pharmacy
  *   "Do you have a laboratory?"        -> Laboratory
  *   "Do you do lab tests?"             -> Laboratory
  *   "Do you accept <a US insurer>?"    -> safe fallback (never claims acceptance)
@@ -77,25 +78,44 @@ function tokenize(text: string): Set<string> {
 
 /** Curated per-service aliases — patient vocabulary, no prose splatting. */
 const serviceAliases: Record<string, string[]> = {
-  "addiction-medicine": [
-    "suboxone", "buprenorphine", "mat", "opioid", "opioids", "withdrawal",
-    "cravings", "recovery", "detox",
+  "general-medicine": [
+    "family doctor", "general medicine", "check up doctor", "consultation",
+    "sick", "fever", "malaria", "typhoid", "wellness", "physical",
   ],
-  telehealth: [
-    "video visit", "virtual visit", "online visit", "video call", "remote",
-    "virtual",
+  "internal-medicine": [
+    "internal", "blood pressure", "hypertension", "diabetes", "chronic",
+    "sugar",
   ],
-  "preventive-care": ["wellness", "physical", "physicals", "prevention"],
+  pediatrics: [
+    "pediatric", "pediatrics", "paediatric", "paediatrics", "child",
+    "children", "kids", "baby", "babies", "infant", "immunization",
+    "immunizations", "vaccination", "vaccinations", "vaccine", "vaccines",
+  ],
+  "emergency-services": [
+    "emergency room", "casualty", "accident", "accidents", "trauma",
+    "injury", "injuries",
+  ],
   laboratory: [
     "laboratory", "lab", "labs", "lab test", "lab tests", "blood test",
     "blood tests", "blood work", "urinalysis", "sample", "samples",
     "diagnostics", "results", "test", "tests",
   ],
-  "nursing-home-visits": [
-    "nursing home", "nursing homes", "facility", "rounds", "elder care",
-    "elderly",
+  "eye-clinic": [
+    "eye", "eyes", "vision", "glasses", "optical", "optician",
+    "optometrist", "cataract", "eye test", "eye exam",
   ],
-  "primary-care": ["family doctor", "general medicine", "check up doctor"],
+  pharmacy: [
+    "pharmacy", "chemist", "drug", "drugs", "medication", "medications",
+    "medicine", "medicines", "prescription", "prescriptions", "refill",
+    "refills",
+  ],
+  "diagnostic-imaging": [
+    "x-ray", "x-rays", "xray", "xrays", "scan", "scans", "ultrasound",
+    "imaging", "radiology",
+  ],
+  ambulance: [
+    "ambulance", "patient transport", "transport", "transfer", "pickup",
+  ],
 };
 
 const serviceTopics: ChatbotTopic[] = services.map((service) => ({
@@ -226,7 +246,7 @@ const topics: ChatbotTopic[] = [
   },
   {
     title: "About Lebarty Medicare Hospital",
-    body: `${site.location.name} is a hospital in ${site.location.city}, ${site.location.region}, offering primary care, addiction medicine, telehealth and more, with the Lebarty Community Health Foundation funding community clinics across Africa.`,
+    body: `${site.location.name} is a hospital in ${site.location.city}, ${site.location.region}, offering general medicine, pediatrics, emergency services, laboratory care and more, with the Lebarty Community Health Foundation funding community clinics across Africa.`,
     href: "/about/dr-lebarty",
     ctaLabel: "About",
     // "medicare" alone is deliberately NOT a keyword — it would hijack

@@ -43,8 +43,8 @@ export function HomeCTA() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="mt-6 max-w-xl text-sm leading-relaxed text-fg/70 sm:text-base"
         >
-          Same-week appointments for new patients. Telehealth most weekday
-          evenings. Whatever you need, a real person here will help you sort it
+          Same-week appointments for new patients, and an emergency unit that
+          never needs one. Whatever you need, a real person here will help you sort it
           out.
         </motion.p>
 
@@ -65,9 +65,9 @@ export function HomeCTA() {
               Call {site.contact.phoneDisplay}
             </MagneticButton>
           </a>
-          <Link href="/services/telehealth">
+          <Link href="/care-packages">
             <MagneticButton className="text-accent hover:text-accent/80">
-              Start with Telehealth →
+              View Care Packages →
             </MagneticButton>
           </Link>
         </motion.div>

@@ -24,6 +24,31 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/services/primary-care',
+        destination: '/services/general-medicine',
+        permanent: true,
+      },
+      {
+        source: '/services/preventive-care',
+        destination: '/services/general-medicine',
+        permanent: true,
+      },
+      {
+        source: '/services/addiction-medicine',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/services/nursing-home-visits',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/services/telehealth',
+        destination: '/services',
+        permanent: true,
+      },
+      {
         source: '/locations/schenectady',
         destination: '/locations/benin-city',
         permanent: true,

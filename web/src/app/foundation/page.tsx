@@ -19,7 +19,7 @@ const programs = [
   {
     eyebrow: "Program one",
     title: "Village Clinics",
-    body: "We build, supply, and staff small community clinics in rural villages where the nearest hospital is hours away. Each one carries primary care, prenatal services, and basic emergency response.",
+    body: "We build, supply, and staff small community clinics in rural villages where the nearest hospital is hours away. Each one carries everyday medical care, prenatal services, and basic emergency response.",
     image: assets.foundationPrograms["village-clinics"],
   },
   {

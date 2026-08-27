@@ -33,7 +33,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Primary care, addiction medicine & telehealth in Benin City, Edo State`,
+    default: `${site.name} — Hospital in Benin City, Edo State`,
     template: `%s · ${site.name}`,
   },
   description: site.shortDescription,
@@ -42,8 +42,9 @@ export const metadata: Metadata = {
   keywords: [
     "hospital in Benin City",
     "family medicine Benin City",
-    "addiction medicine Benin City",
-    "telehealth primary care Nigeria",
+    "pediatrics Benin City",
+    "emergency hospital Benin City",
+    "laboratory services Benin City",
     "Lebarty Medicare Hospital",
     "Lebarty Medicare",
     "community health foundation Africa",
@@ -92,10 +93,10 @@ const jsonLd = {
       },
       areaServed: ["Benin City", "Edo State", "Nigeria"],
       medicalSpecialty: [
-        "Family Medicine",
-        "Addiction Medicine",
-        "Hospitalist Medicine",
+        "General Medicine",
         "Internal Medicine",
+        "Pediatrics",
+        "Emergency Medicine",
       ],
     },
     {
@@ -111,6 +112,7 @@ const jsonLd = {
 
 // Derived from the nav data so desktop and mobile menus can never drift.
 // The fullscreen mobile menu shows everything flat, dropdown included.
+// (Home on mobile is the beating-heart logo MobileNav pins top-left.)
 const mobileLinks = [...navPrimary, ...navMore].map((item, i) => ({
   ...item,
   n: String(i + 1).padStart(2, "0"),
