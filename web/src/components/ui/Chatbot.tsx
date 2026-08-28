@@ -106,9 +106,6 @@ export function Chatbot() {
                 <h2 className="font-display text-xl leading-none">
                   Lebarty assistant
                 </h2>
-                <p className="mt-1 text-xs text-white/65">
-                  Website answers, no AI key
-                </p>
               </div>
             </div>
             <button
