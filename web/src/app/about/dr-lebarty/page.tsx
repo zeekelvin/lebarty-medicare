@@ -86,14 +86,16 @@ export default function DrLebartyPage() {
           imageAlt="Portrait of Dr. Nosa Lebarty"
           eyebrow="Founder & physician"
           title="A doctor who keeps showing up."
+          portrait
         >
           <p>
-            Dr. Lebarty trained at Ellis Hospital in Schenectady and went on to
+            Dr. Lebarty trained at Ellis Hospital in Schenectady, New York and
+            went on to
             build a career that refuses to specialize past the patient: seeing
             primary-care patients in clinic, treating opioid use disorder with
             Suboxone, rounding at skilled nursing facilities, teaching medical
-            students, and serving as a medical director in county government
-            before founding Lebarty Medicare Hospital in Benin City.
+            students, and serving as a medical director in county government in
+            New York before founding Lebarty Medicare Hospital in Benin City.
           </p>
           <p>
             That breadth isn&rsquo;t a r&eacute;sum&eacute;. It&rsquo;s a
@@ -139,7 +141,7 @@ export default function DrLebartyPage() {
             <SectionHeading
               eyebrow="Education & training"
               title="Trained here. Rooted here."
-              intro="Dr. Lebarty&rsquo;s credentials trace a path from residency in Schenectady to a practice that serves the same community decades on."
+              intro="Dr. Lebarty&rsquo;s credentials trace a path from residency in Schenectady, New York to a practice that serves the same community decades on."
             />
             <ul className="mt-10 space-y-6">
               {training.map((t, i) => (
