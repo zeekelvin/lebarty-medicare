@@ -34,11 +34,11 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt = "", children
       {/* Brand overlays — keep text legible, let the photo breathe on the right */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-[#0b1f30]/95 via-[#0b1f30]/80 to-[#0b1f30]/45"
+        className="absolute inset-0 bg-gradient-to-r from-[#0b1f30]/85 via-[#0b1f30]/55 to-[#0b1f30]/15"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-[#0b1f30] via-transparent to-[#0b1f30]/40"
+        className="absolute inset-0 bg-gradient-to-t from-[#0b1f30]/80 via-transparent to-[#0b1f30]/30"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-32 sm:pb-28 sm:pt-40">
