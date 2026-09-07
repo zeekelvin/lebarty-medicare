@@ -19,7 +19,7 @@ type Props = {
  */
 export function PageHero({ eyebrow, title, intro, image, imageAlt = "", children }: Props) {
   return (
-    <section className="relative isolate overflow-hidden bg-[#0b1f30]">
+    <section className="relative isolate overflow-hidden bg-[#063B35]">
       {image ? (
         <Image
           src={image}
@@ -34,17 +34,17 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt = "", children
       {/* Brand overlays — keep text legible, let the photo breathe on the right */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-[#0b1f30]/85 via-[#0b1f30]/55 to-[#0b1f30]/15"
+        className="absolute inset-0 bg-gradient-to-r from-[#063B35]/85 via-[#063B35]/40 to-transparent"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-[#0b1f30]/80 via-transparent to-[#0b1f30]/30"
+        className="absolute inset-0 bg-gradient-to-t from-[#063B35]/62 via-transparent to-[#063B35]/20"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-32 sm:pb-28 sm:pt-40">
         {eyebrow ? (
           <Reveal>
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.3em] text-brand">
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.3em] text-[#FBC9DF]">
               {eyebrow}
             </p>
           </Reveal>
