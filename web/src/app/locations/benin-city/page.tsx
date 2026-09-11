@@ -117,7 +117,7 @@ export default function BeninCityLocationPage() {
           <Reveal delay={0.08} className="lg:col-span-7">
             <div className="flex h-full flex-col rounded-2xl border border-fg/10 bg-bg p-7 sm:p-8">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">
-                Office hours
+                Opening hours
               </p>
               <ul className="mt-4 divide-y divide-fg/10">
                 {location.hours.map((h) => (
@@ -133,8 +133,8 @@ export default function BeninCityLocationPage() {
                 ))}
               </ul>
               <p className="mt-5 text-sm leading-relaxed text-fg/60">
-                Holiday hours may vary. For urgent medical issues, call 112
-                (emergency services) or the hospital line right away.
+                We are open around the clock, every day. For emergencies, call
+                112 or come straight to the emergency unit.
               </p>
             </div>
           </Reveal>

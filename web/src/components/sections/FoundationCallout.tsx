@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useInView,
@@ -19,13 +19,49 @@ export function FoundationCallout() {
     offset: ["start end", "end start"],
   });
   const imgY = useTransform(scrollYProgress, [0, 1], ["8%", "-8%"]);
-  const [videoExists, setVideoExists] = useState(true);
-  const [videoReady, setVideoReady] = useState(false);
-  // Mount the (large) banner video well before the section arrives so it has
-  // time to buffer, but never for visitors who prefer reduced motion — they
-  // keep the calm gradient instead of an unpausable autoplay loop.
+  // Mount the (large) banner videos well before the section arrives so they
+  // have time to buffer, but never for visitors who prefer reduced motion —
+  // they keep the calm gradient instead of an unpausable autoplay loop.
   const nearViewport = useInView(ref, { once: true, margin: "1500px 0px" });
   const reducedMotion = useReducedMotion();
+
+  // The clips play back to back: when one ends the next fades in, and the
+  // rotation wraps around. A clip that fails to load drops out of the rotation.
+  const clips = assets.foundationLoops;
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [active, setActive] = useState(0);
+  const [warmNext, setWarmNext] = useState(false);
+  const [ready, setReady] = useState<boolean[]>(() => clips.map(() => false));
+  const [failed, setFailed] = useState<boolean[]>(() => clips.map(() => false));
+
+  const playable = clips.map((_, i) => i).filter((i) => !failed[i]);
+  const showVideo = nearViewport && !reducedMotion && playable.length > 0;
+  const nextIndex = (from: number) => {
+    const pos = playable.indexOf(from);
+    return playable[(pos + 1) % playable.length] ?? playable[0];
+  };
+
+  useEffect(() => {
+    if (!showVideo) return;
+    const v = videoRefs.current[active];
+    if (!v) return;
+    v.currentTime = 0;
+    v.play().catch(() => {});
+  }, [active, showVideo]);
+
+  const advance = (from: number) => {
+    if (from !== active || playable.length < 2) return;
+    setWarmNext(false);
+    setActive(nextIndex(from));
+  };
+
+  const markFailed = (i: number) => {
+    setFailed((prev) => prev.map((f, idx) => (idx === i ? true : f)));
+    if (i === active) {
+      const rest = playable.filter((idx) => idx !== i);
+      if (rest.length) setActive(rest[0]);
+    }
+  };
 
   return (
     <section
@@ -39,21 +75,42 @@ export function FoundationCallout() {
         className="absolute inset-[-8%] z-0 will-change-transform"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#a30f54] via-[#f21872] to-[#7a0e40]" />
-        {nearViewport && !reducedMotion && videoExists && assets.foundationLoop && (
-          <video
-            src={assets.foundationLoop}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            onCanPlay={() => setVideoReady(true)}
-            onError={() => setVideoExists(false)}
-            className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${
-              videoReady ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        )}
+        {showVideo &&
+          clips.map((src, i) => {
+            if (failed[i]) return null;
+            const isActive = i === active;
+            const isNext = playable.length > 1 && i === nextIndex(active);
+            return (
+              <video
+                key={src}
+                ref={(el) => {
+                  videoRefs.current[i] = el;
+                }}
+                src={src}
+                muted
+                playsInline
+                aria-hidden
+                loop={playable.length === 1}
+                // Buffer the active clip fully; start buffering the next one
+                // once the active clip is actually playing, so the handover
+                // is seamless without downloading everything up front.
+                preload={isActive || (isNext && warmNext) ? "auto" : "metadata"}
+                onCanPlay={() =>
+                  setReady((prev) =>
+                    prev[i] ? prev : prev.map((r, idx) => (idx === i ? true : r)),
+                  )
+                }
+                onPlaying={() => {
+                  if (isActive) setWarmNext(true);
+                }}
+                onEnded={() => advance(i)}
+                onError={() => markFailed(i)}
+                className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ${
+                  isActive && ready[i] ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            );
+          })}
       </motion.div>
 
       {/* Readability scrim */}
