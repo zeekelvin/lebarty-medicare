@@ -193,13 +193,12 @@ const topics: ChatbotTopic[] = [
   },
   {
     title: "Location and hours",
-    body: `${site.location.name} is in ${site.location.city}, ${site.location.region}: ${site.location.street}. Hours are ${site.location.hours
-      .map((item) => `${item.days}: ${item.hours}`)
-      .join("; ")}.`,
+    body: `${site.location.name} is in ${site.location.city}, ${site.location.region}: ${site.location.street}. The hospital is ${site.location.hoursSummary}.`,
     href: "/locations/benin-city",
     ctaLabel: "View location",
     keywords: [
       "where", "location", "address", "directions", "map", "hours", "open",
+      "24", "24/7", "night", "weekend", "weekends", "saturday", "sunday",
       "opening", "close", "closing", "benin", "edo", "airport road",
       "aruogba", "arogba", "hospital", "park", "parking",
     ],

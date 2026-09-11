@@ -17,7 +17,11 @@ export const assets = {
   heroLoop: `${CDN}/hf_20260523_034908_d3e27166-c3a2-4584-a006-6af217749653.mp4`,
 
   foundationStill: `${CDN}/hf_20260521_175705_c5189715-3458-4476-ac9c-1d08508f46fd.png`,
-  foundationLoop: "/foundation-banner.mp4", // client-supplied banner video
+  /** Client-supplied clips that play back to back in the foundation section. */
+  foundationLoops: [
+    "/foundation-clinics.mp4", // commissioning-day tour: exterior, reception, ward, staff
+    "/foundation-banner.mp4",
+  ],
 
   // Foundation programs — community health work across Africa.
   foundationPrograms: {

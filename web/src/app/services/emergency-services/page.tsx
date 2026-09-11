@@ -52,7 +52,7 @@ const content: ServiceContent = {
     },
     {
       q: "Do I need an appointment or referral?",
-      a: "No. Emergencies are seen immediately, day or night arrangements are confirmed by the front desk. Care always comes before paperwork.",
+      a: "No. Emergencies are seen immediately, day or night. Care always comes before paperwork.",
     },
     {
       q: "Can the ambulance come to me?",

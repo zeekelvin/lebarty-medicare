@@ -25,7 +25,7 @@ export default function ContactPage() {
         imageAlt="The welcoming front desk and waiting area at Lebarty Medicare"
         eyebrow="Contact"
         title="Talk to a real person."
-        intro="Monday through Friday, 8 AM to 6 PM WAT. Most messages are returned the same business day. For urgent medical issues, call 112 (emergency services) or the hospital line right away."
+        intro={`The hospital is ${site.location.hoursSummary}. Messages are usually answered the same day. For emergencies, call 112 or the hospital line right away.`}
       >
         <ButtonLink href={`tel:${site.contact.phoneTel}`} size="lg">
           Call {site.contact.phoneDisplay}

@@ -40,11 +40,9 @@ export const site = {
     region: 'Edo State',
     postalCode: '',
     country: 'NG',
-    hours: [
-      { days: 'Mon – Fri', hours: '8:00 AM – 6:00 PM' },
-      { days: 'Saturday',  hours: '9:00 AM – 1:00 PM' },
-      { days: 'Sunday',    hours: 'Telehealth on request' },
-    ],
+    /** The hospital runs around the clock (owner, 2026-09-10). */
+    hours: [{ days: 'Every day', hours: 'Open 24 hours' }],
+    hoursSummary: 'open 24 hours a day, every day',
   },
   ecosystem: {
     centralmed: 'https://www.centralmedurgentcare.com',

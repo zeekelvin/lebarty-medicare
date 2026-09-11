@@ -36,3 +36,7 @@ Thumbs.db
 
 # Build artifacts
 web/tsconfig.tsbuildinfo
+
+# Raw phone footage (hundreds of MB) - transcode into web/public instead
+*.MOV
+*.mov

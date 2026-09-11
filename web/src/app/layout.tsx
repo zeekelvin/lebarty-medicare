@@ -86,7 +86,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "MedicalOrganization",
+      // Hospital is a MedicalOrganization that also carries LocalBusiness
+      // fields, so opening hours are valid here.
+      "@type": "Hospital",
       "@id": `${site.url}#organization`,
       name: site.location.name,
       url: site.url,
@@ -101,6 +103,20 @@ const jsonLd = {
         addressCountry: site.location.country,
       },
       areaServed: ["Benin City", "Edo State", "Nigeria"],
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
       medicalSpecialty: [
         "General Medicine",
         "Internal Medicine",

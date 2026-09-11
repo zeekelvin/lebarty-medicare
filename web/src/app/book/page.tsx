@@ -19,7 +19,7 @@ const bookingWays = [
   {
     eyebrow: "The fastest way",
     title: "Call us",
-    body: `Reach the front desk at ${site.contact.phoneDisplay}, Monday through Friday, 8 AM to 6 PM WAT. A real person will find you a time, and most new patients are seen within a week.`,
+    body: `Reach the front desk at ${site.contact.phoneDisplay}, any time, day or night. A real person will find you a time, and most new patients are seen within a week.`,
   },
   {
     eyebrow: "From anywhere",
