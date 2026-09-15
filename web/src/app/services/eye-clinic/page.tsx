@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "Eye examinations, vision testing, and glasses prescriptions at the hospital you already know. The clinic manages common eye conditions on site, and when a problem needs specialist surgery, your doctor arranges the referral and stays involved in your care.",
   heroImage: assets.services["eye-clinic"],
-  featureImage: assets.services["eye-clinic"],
   overviewTitle: "Everyday eye care, done properly.",
   overview: [
     "Most eye problems do not need a big hospital in another city. They need someone who looks carefully, tests properly, and explains what they find. The eye clinic covers exactly that: routine eye examinations, vision testing, and treatment for the conditions that bring most people in, like itching, redness, blurred vision, and headaches from eye strain.",

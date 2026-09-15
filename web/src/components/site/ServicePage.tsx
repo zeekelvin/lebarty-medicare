@@ -2,7 +2,6 @@ import { ButtonLink } from "@/components/ui/Button";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/site/Section";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { FeatureRow } from "@/components/site/FeatureRow";
 import { FAQ } from "@/components/site/FAQ";
 import { CardGrid } from "@/components/site/CardGrid";
 import { CTABand } from "@/components/site/CTABand";
@@ -16,7 +15,6 @@ export type ServiceContent = {
   heroImage?: string;
   overviewTitle: string;
   overview: string[];
-  featureImage?: string;
   expectTitle?: string;
   expect: string[];
   steps?: { title: string; body: string }[];
@@ -66,17 +64,15 @@ export function ServicePage(c: ServiceContent) {
         </ButtonLink>
       </PageHero>
 
-      <Section>
-        <FeatureRow
-          image={c.featureImage || ""}
-          imageAlt={c.title}
-          eyebrow="Overview"
-          title={c.overviewTitle}
-        >
-          {c.overview.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </FeatureRow>
+      <Section width="narrow">
+        <SectionHeading eyebrow="Overview" title={c.overviewTitle} />
+        <Reveal delay={0.1}>
+          <div className="mt-8 space-y-4 text-base leading-relaxed text-fg/75 sm:text-lg">
+            {c.overview.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </Reveal>
       </Section>
 
       <Section tone="muted">

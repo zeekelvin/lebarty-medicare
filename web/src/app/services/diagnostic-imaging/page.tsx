@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "X-ray and ultrasound imaging on site, supporting diagnosis across the whole hospital. Your scan happens where your doctor works, so results move quickly, and someone who knows your case sits down with you to explain what the images show.",
   heroImage: assets.services["diagnostic-imaging"],
-  featureImage: assets.services["diagnostic-imaging"],
   overviewTitle: "Imaging that answers a question.",
   overview: [
     "A scan is only useful if it answers the question your doctor is asking. That is how imaging works here: your clinician orders the study, the imaging team performs it on site, and the result goes straight back into your chart. Whether it is a chest X-ray for a stubborn cough, an X-ray after a fall, or an ultrasound of the abdomen or a pregnancy, the scan serves the treatment.",

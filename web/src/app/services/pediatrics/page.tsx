@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "Care for babies, children, and teenagers, from the first weeks of life through the growing years. Check-ups, immunizations, treatment when illness strikes, and steady growth monitoring, delivered gently and explained in a way that leaves parents confident, not confused.",
   heroImage: assets.services["pediatrics"],
-  featureImage: assets.services["pediatrics"],
   overviewTitle: "Growing up, looked after.",
   overview: [
     "Children are not small adults. Their illnesses move differently, their doses are different, and a visit works best when the pace is set by the child, not the clock. The pediatric clinic is built around that: unhurried consultations where a child is examined gently, a worried parent is heard fully, and every finding is explained in plain language.",
