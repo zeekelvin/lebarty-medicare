@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "Ambulance response for emergencies and planned transport for everything else: getting to an appointment, coming home after admission, or moving safely between facilities. In an emergency, call 112 or the hospital line immediately. For planned transport, one call to the front desk arranges it.",
   heroImage: assets.services["ambulance"],
-  featureImage: assets.services["ambulance"],
   overviewTitle: "Two kinds of journey, one careful team.",
   overview: [
     "Some journeys cannot wait. When there is a collapse, a serious injury, severe bleeding, or sudden difficulty breathing, call 112 or the hospital line immediately and say where you are. The team guides you on what to do while help is on the way, and the emergency room is prepared before the patient arrives, so care starts the moment the doors open.",

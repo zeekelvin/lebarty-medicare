@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "In-depth care for adults living with hypertension, diabetes, and other chronic conditions, and careful detective work when symptoms refuse to explain themselves. This is unhurried medicine: one doctor, your full story, and a plan built for the long term, not just for today's visit.",
   heroImage: assets.services["internal-medicine"],
-  featureImage: assets.services["internal-medicine"],
   overviewTitle: "For the conditions that stay.",
   overview: [
     "Some conditions are not cured in a single visit. High blood pressure, diabetes, and other chronic illnesses live with you for years, and managing them well is the difference between a full life and a series of crises. Internal medicine is built for exactly this: adult care that looks at the whole person, not just the complaint of the day.",

@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "Everyday consultations, check-ups, and treatment for the illnesses that interrupt ordinary life: malaria, typhoid, infections, and minor injuries. When something feels off, this is where you start. A doctor listens, examines, treats, and if you need more specialised care, walks you to it under the same roof.",
   heroImage: assets.services["general-medicine"],
-  featureImage: assets.services["general-medicine"],
   overviewTitle: "Everyday care, done properly.",
   overview: [
     "Most health worries do not need a specialist. They need a doctor who takes the time to listen, ask the right questions, and examine you carefully. General medicine covers the visits that make up most of hospital life: a fever that will not break, a persistent cough, a stomach that has been unsettled for days, a cut that needs attention, or simply a check-up because it has been a while.",

@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "Accidents and sudden illness do not wait for an appointment, and neither do we. For an emergency, call 112 or the hospital line, or come straight to the emergency unit. The team stabilizes first, and explains everything as soon as it is safe to.",
   heroImage: assets.services["emergency-services"],
-  featureImage: assets.services["emergency-services"],
   overviewTitle: "Built for the moments that cannot wait.",
   overview: [
     "The emergency unit handles accidents, injuries, sudden severe illness, and any situation where waiting would be dangerous. You do not need an appointment, a referral, or paperwork to be seen: come in, and the team takes it from there.",

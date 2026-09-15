@@ -15,7 +15,6 @@ const content: ServiceContent = {
   intro:
     "An on-site pharmacy means your visit does not end with a prescription slip and a search across town. Medicines are filled right after you see the doctor, with someone taking the time to explain what each one does, how to take it, and what to watch for.",
   heroImage: assets.services["pharmacy"],
-  featureImage: assets.services["pharmacy"],
   overviewTitle: "From prescription to first dose, under one roof.",
   overview: [
     "When your doctor prescribes a medicine, the pharmacy fills it before you leave the building. No second trip, no guessing whether the chemist down the road stocks the right thing, and no gap between the decision and the treatment. The pharmacy team works from the same chart as your doctor, so what you collect matches exactly what was intended.",

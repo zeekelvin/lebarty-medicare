@@ -21,7 +21,6 @@ const content: ServiceContent = {
     "Common tests include full blood count, blood sugar, kidney and liver panels, lipid profile, urinalysis, and screening tests for infections. Test availability changes as the laboratory grows, so call the front desk to confirm a specific test before your visit.",
     "Results are never just numbers on a slip. Your clinician walks you through what a result means, what it changes, and what happens next. Everything lands in the same chart your care team already works from.",
   ],
-  featureImage: assets.services["laboratory"],
   expectTitle: "What the laboratory covers.",
   expect: [
     "Blood work: full blood count, blood sugar, and organ panels",
