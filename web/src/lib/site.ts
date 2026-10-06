@@ -177,9 +177,6 @@ export const carePackages = [
       'Full blood count',
       'Urinalysis',
       'Blood group & genotype',
-      'Fasting blood sugar',
-      'ESR',
-      'Stool routine',
     ],
   },
   {
@@ -192,9 +189,11 @@ export const carePackages = [
     featured: true,
     basedOn: 'Silver',
     includes: [
-      'Kidney function tests (E/U/Cr)',
+      'Complete chemistry',
       'Chest X-ray',
       'ECG',
+      'STD screening',
+      'H. pylori screening',
     ],
   },
   {
@@ -210,9 +209,8 @@ export const carePackages = [
       'Lipid profile',
       'HIV screening',
       'Hepatitis B & C screening',
-      '2-hour postprandial blood sugar (2HPP)',
       'Abdominopelvic ultrasound scan',
-      'Stool occult blood',
+      'Essential vitamin screening',
     ],
   },
 ] as const;
