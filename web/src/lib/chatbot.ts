@@ -118,6 +118,13 @@ const serviceAliases: Record<string, string[]> = {
   ],
 };
 
+/**
+ * Generic words in service titles ("Emergency Services", "Laboratory
+ * Services") must not score, or "What services do you offer?" routes to
+ * whichever service is listed first instead of the full list.
+ */
+const GENERIC_TITLE_WORDS = new Set(["service", "services"]);
+
 const serviceTopics: ChatbotTopic[] = services.map((service) => ({
   title: service.title,
   body: `${service.description} You can read more on the ${service.title} page, or book a visit if you are ready.`,
@@ -126,10 +133,17 @@ const serviceTopics: ChatbotTopic[] = services.map((service) => ({
   // Title as a phrase + distinctive words + curated aliases — never prose.
   keywords: [
     service.title.toLowerCase(),
-    ...tokenize(service.title),
+    ...[...tokenize(service.title)].filter((w) => !GENERIC_TITLE_WORDS.has(w)),
     ...(serviceAliases[service.slug] ?? []),
   ],
 }));
+
+const serviceList = services
+  .map((service) => `• ${service.title}: ${service.eyebrow.toLowerCase()}`)
+  .join("\n");
+
+/** Shared hand-off line: send visitors to the office with a clear next step. */
+const officeNextStep = `For more information, contact the office directly on ${site.contact.phoneDisplay} or ${site.contact.email}. The team will answer your questions and walk you through the next step.`;
 
 const carePackageList = carePackages
   .map(
@@ -159,7 +173,7 @@ const topics: ChatbotTopic[] = [
   },
   {
     title: "Care packages",
-    body: `Lebarty care packages are prepaid check-up bundles, not insurance plans. The current tiers are:\n\n${carePackageList}\n\n${carePackagesDisclaimer}`,
+    body: `Lebarty care packages are prepaid check-up bundles, not insurance plans. The current tiers are:\n\n${carePackageList}\n\n${carePackagesDisclaimer}\n\nNext step: contact the office directly on ${site.contact.phoneDisplay} or ${site.contact.email} to confirm the package and current price, make payment, then book your check-up. The team will answer any other questions you have.`,
     href: "/care-packages",
     ctaLabel: "View care packages",
     keywords: [
@@ -173,11 +187,14 @@ const topics: ChatbotTopic[] = [
   ...serviceTopics,
   {
     title: "Our services",
-    body: `We offer ${services.map((s) => s.title).join(", ")}. Each has its own page with details, or ask me about a specific one.`,
+    body: `${site.location.name} offers:\n\n${serviceList}\n\nEach service has its own page with details, or ask me about a specific one. ${officeNextStep}`,
     href: "/services",
     ctaLabel: "View all services",
     // Deliberately narrow — specific service aliases must outrank this topic.
-    keywords: ["service", "services", "specialties", "specialists", "departments"],
+    keywords: [
+      "service", "services", "offer", "offers", "specialties", "specialists",
+      "departments", "what services", "all services",
+    ],
   },
   {
     title: "Booking a visit",
